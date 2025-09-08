@@ -4,93 +4,95 @@
 
 # Personas
 
-*Persona 1 – Maria Silva*
+*Persona 1 – Lucas Alves*
 
-Idade: 42 anos
-Profissão: Feirante
+Idade: 18 anos
+Profissão: Estudante Universitário
 Localização: Belo Horizonte – MG
-Formação: Ensino Fundamental incompleto
-Objetivo: Vender todas as mercadorias da feira e evitar perdas financeiras.
+Formação: Ensino Superior em andamento
+Objetivo: Iniciar em um projeto de pesquisa
 
 Descrição:
-Maria é uma feirante tradicional que trabalha há mais de 15 anos em uma feira de bairro. Conhecida por sua simpatia, tem uma clientela fiel, mas enfrenta dificuldades constantes para vender todos os produtos que leva para a feira. No final do dia, muitos alimentos ainda bons acabam sendo descartados. Maria já utiliza um celular para se comunicar com clientes pelo WhatsApp, mas nunca usou uma plataforma digital de vendas.
+Estudante do primeiro período de Engenharia de Computação, 18 anos. É proativo e possui grande interesse em participar da vida acadêmica, mas sente-se desorientado pela falta de um ponto de partida claro e de uma rede de contatos na universidade.
 
 Dores:
-Maria se frustra ao ver parte de sua produção ir para o lixo, o que representa prejuízo financeiro. Ela sente falta de uma forma simples de escoar os produtos restantes da feira. Além disso, tem receio de soluções tecnológicas muito complexas, já que seu conhecimento digital é limitado.
+A informação sobre projetos é pulverizada em diversos canais, tornando o acompanhamento difícil e ineficiente. Além disso, sente-se inseguro para abordar professores diretamente sem um processo formal.
 
 Expectativas:
-Maria espera uma aplicação simples e intuitiva, onde possa cadastrar seus produtos rapidamente e alcançar consumidores que valorizem alimentos frescos a preços acessíveis. Seu desejo é reduzir perdas e aumentar a renda familiar.
+Encontrar uma plataforma única que centralize todas as oportunidades e ter acesso a projetos com baixa barreira de entrada, ideais para uma primeira experiência.
 
 
-*Persona 2 – João Andrade*
+*Persona 2 – Juliana Costa*
 
-Idade: 29 anos
-Profissão: Designer gráfico autônomo
+Idade: 26 anos
+Profissão: Estudante Universitária
 Localização: São Paulo – SP
-Formação: Ensino Superior completo
-Objetivo: Adquirir alimentos frescos a preços justos e apoiar práticas sustentáveis.
+Formação: Ensino Superior em andamento
+Objetivo: Primeira experiência acadêmica apra enriquecer seu currículo em uma iniciação científica.
 
 Descrição:
-João é um jovem urbano que trabalha como freelancer e costuma organizar bem seus gastos mensais. Adepto de práticas sustentáveis, prefere andar de bicicleta e comprar alimentos em feiras orgânicas. No entanto, sente dificuldade em encontrar preços acessíveis em grandes centros urbanos e acaba recorrendo a supermercados.
+Aluna do sétimo período de Relações Internacionais, 26 anos. Está focada em sua carreira e busca uma experiência de pesquisa de alto impacto para enriquecer seu currículo para uma futura pós-graduação.
 
 Dores:
-João sente que muitas vezes paga caro por alimentos de qualidade. Ele também gostaria de ter maior transparência sobre a origem dos produtos que consome.
+Perde muito tempo filtrando oportunidades irrelevantes para seus objetivos específicos e acha frequentemente vagas interessantes sem uma descrição, impedindo uma avaliação clara do escopo do trabalho.
 
-Expectativas:
-Espera encontrar uma plataforma digital que permita visualizar produtos frescos próximos ao vencimento com preços reduzidos, além de informações sobre procedência. Deseja contribuir para a redução do desperdício e apoiar pequenos produtores locais.
+Expectativas: Utilizar filtros de busca avançados para encontrar rapidamente vagas em sua área de nicho e acessar informações detalhadas sobre pré-requisitos, atividades e resultados esperados.
 
+*Persona 3 – Profª. Drª. Helena Medeiros (Docente Pesquisadora Estabelecida)*
 
-*Persona 3 – Clara Souza*
-
-Idade: 35 anos
-Profissão: Auxiliar administrativa
-Localização: Contagem – MG
-Formação: Ensino Médio completo
-Objetivo: Reduzir gastos com alimentação sem comprometer a saúde da família.
+Idade: 48 anos
+Profissão: Professora e Pesquisadora Universitária
+Localização: Rio de Janeiro – RJ
+Formação: Pós-doutorado completo
+Objetivo: Recrutar estudantes empenhados a produzir materiais para pesquisas e que buscam seguir a carreira acadêmica.
 
 Descrição:
-Clara é mãe de dois filhos e responsável pelas compras da casa. Seu orçamento mensal é apertado, e ela está sempre em busca de promoções e formas de economizar. Usa o celular diariamente para redes sociais e compras online, mas prefere aplicativos simples e objetivos.
+Pesquisadora do Departamento de Biologia e professora adjunta, 48 anos. Coordena um laboratório com múltiplos projetos e considera o recrutamento de alunos um ônus administrativo que consome tempo de pesquisa.
 
 Dores:
-Clara enfrenta a dificuldade de conciliar qualidade e preço. Muitas vezes acaba comprando alimentos de menor valor nutricional porque os frescos são mais caros.
+O processo de divulgação de vagas é burocrático e atinge um público limitado. 
+Recebe um volume elevado de candidaturas de alunos que não possuem o perfil técnico necessário.
 
 Expectativas:
-Espera receber notificações sobre ofertas em feiras próximas e encontrar facilmente produtos frescos por preços acessíveis. Deseja melhorar a alimentação da família sem estourar o orçamento doméstico.
+Ter um canal único e eficiente para divulgar suas vagas para toda a universidade.
+Receber candidaturas mais qualificadas através de pré-requisitos claros.
 
-*Persona 4 – Antônio Ribeiro*
+*Persona 4 – Prof. Dr. Ricardo Barros (Docente em Início de Carreira)*
 
-Idade: 56 anos
-Profissão: Agricultor familiar
-Localização: Mariana – MG (zona rural)
-Formação: Ensino Fundamental completo
-Objetivo: Ampliar o alcance de seus produtos para clientes urbanos.
+Idade: 34 anos
+Profissão: Professor e Pesquisador Universitário
+Localização: Manaus – AM 
+Formação: Pós-graduação concluída
+Objetivo: Divulgar para estudantes seu projeto de extensão
 
 Descrição:
-Antônio vive da agricultura familiar e leva sua produção semanalmente para a feira da cidade. Muitas vezes não consegue vender todos os produtos, o que gera perdas. Ele tem celular, mas seu uso é limitado a ligações e mensagens no WhatsApp.
+Professor recém-contratado do Departamento de Letras, 34 anos. Está motivado para iniciar seu primeiro projeto de extensão, mas não possui uma rede de contatos com os estudantes e teme que seu projeto não tenha visibilidade.
 
 Dores:
-Antônio perde parte da produção por falta de compradores. Ele também sente dificuldade em acessar clientes que moram em áreas urbanas mais distantes.
+Insegurança sobre quais os canais mais eficazes e seguros para divulgar seu novo projeto.
+Receio de não receber um número suficiente de candidatos qualificados.
 
 Expectativas:
-Espera que a aplicação seja acessível e ajude a alcançar novos consumidores, garantindo que sua produção não seja desperdiçada. Deseja aumentar sua renda e ter mais previsibilidade sobre suas vendas.
-
+Uma plataforma que dê visibilidade igualitária a todos os projetos, novos ou antigos.
+Alcançar um público amplo e interdisciplinar de estudantes que possam se interessar pelo seu tema.
 
 *Persona 5 – Luana Ferreira*
 
 Idade: 23 anos
-Profissão: Estudante de Nutrição
-Localização: Curitiba – PR
-Formação: Ensino Superior em andamento
-Objetivo: Comprar alimentos frescos e saudáveis gastando pouco.
+Profissão: Pesquisadora
+Localização: Pernambuco - PE
+Formação: Pós-doutorado em andamento
+Objetivo: Utilização de um ambiente profissional seguro e formal desde o primeiro contato
 
 Descrição:
-Luana é estudante universitária e mora sozinha em uma cidade grande. Tem um orçamento limitado, mas se preocupa em manter uma alimentação equilibrada. Está sempre conectada e utiliza diferentes aplicativos de delivery e compras.
+Drª. Carolina Lima, 32 anos, é uma pesquisadora de pós-doutorado no Instituto de Química. Recentemente, conseguiu financiamento para seu primeiro projeto de iniciação científica e busca recrutar uma aluna ou aluno. Como uma mulher jovem em uma posição de liderança acadêmica, ela se preocupa com a dinâmica de poder e preza pela criação de um ambiente profissional seguro e formal desde o primeiro contato.
 
 Dores:
-Luana acha difícil manter uma dieta saudável por causa dos preços elevados dos alimentos frescos. Muitas vezes acaba recorrendo a refeições rápidas e industrializadas.
+Exposição e Vulnerabilidade: Sente-se desconfortável em divulgar seu e-mail e contato pessoal em canais públicos ou listas de e-mail departamentais, temendo receber contatos inadequados, spam ou até mesmo assédio. Quer evitar comunicações fora de hora ou por canais não profissionais (como redes sociais pessoais), mantendo todas as interações dentro de um contexto estritamente acadêmico.
 
 Expectativas:
-Espera uma plataforma fácil de usar, com boas promoções em frutas, verduras e legumes. Deseja praticidade para comprar rapidamente pelo celular, conciliando sua rotina de estudos com hábitos alimentares mais saudáveis.
+Ambiente Controlado e Verificado, espera uma plataforma de acesso restrito à comunidade acadêmica (com login institucional), garantindo que todos os usuários são estudantes verificados. 
+Deseja que a comunicação inicial ocorra dentro da plataforma, protegendo suas informações de contato direto até que ela se sinta segura para compartilhar.
 
 # Histórias de Usuários
 
