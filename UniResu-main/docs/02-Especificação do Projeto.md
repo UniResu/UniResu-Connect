@@ -76,9 +76,9 @@ Expectativas:
 Uma plataforma que dê visibilidade igualitária a todos os projetos, novos ou antigos.
 Alcançar um público amplo e interdisciplinar de estudantes que possam se interessar pelo seu tema.
 
-*Persona 5 – Luana Ferreira*
+*Persona 5 – Drª. Carolina Lima (Pesquisadora Focada em Segurança)*
 
-Idade: 23 anos
+Idade: 32 anos
 Profissão: Pesquisadora
 Localização: Pernambuco - PE
 Formação: Pós-doutorado em andamento
@@ -98,16 +98,16 @@ Deseja que a comunicação inicial ocorra dentro da plataforma, protegendo suas 
 
 Com base na análise das personas, foram identificadas as seguintes histórias de usuários. Elas foram organizadas por contexto, de forma a facilitar a compreensão dos requisitos funcionais e não funcionais relacionados à aplicação.
 
-## Cadastro e Divulgação de Produtos (Feirantes)
+## Cadastro e Divulgação de Docentes e Funcionários Universitários
 
 | EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                            | PARA ... `MOTIVO/VALOR`                                          |
 | -------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------- |
-| Maria (Feirante)     | Cadastrar minha empresa/feira com CNPJ e endereço             | Disponibilizar minhas ofertas de forma oficial e confiável       |
-| Maria (Feirante)     | Criar posts com foto, descrição, preço, validade e quantidade | Divulgar os produtos que sobraram da feira de forma atrativa     |
-| Maria (Feirante)     | Editar ou excluir minhas próprias ofertas                     | Manter as informações atualizadas e evitar anúncios inválidos    |
-| Antônio (Agricultor) | Associar meu perfil ao cadastro da minha feira                | Garantir que eu possa publicar produtos em nome da minha empresa |
-| Antônio (Agricultor) | Ter minhas ofertas excluídas automaticamente após a validade  | Evitar problemas com consumidores e manter a confiança           |
-| Antônio (Agricultor) | Visualizar a média de avaliação da minha feira                | Acompanhar minha reputação e planejar melhorias nas vendas       |
+| Drª. Carolina Lima (Pesquisadora Focada em Segurança) | preciso de um sistema de mensagens interno na plataforma para o contato inicial com candidatos             | para proteger minhas informações pessoais (e-mail, telefone) e evitar comunicações inadequadas       |
+| Drª. Carolina Lima (Pesquisadora Focada em Segurança) | preciso que a plataforma exija autenticação via login institucional |para garantir que estou interagindo apenas com estudantes verificados da comunidade acadêmica     |
+| Profª. Drª. Helena Medeiros (Docente Pesquisadora) | Editar ou excluir minhas próprias ofertas                     | Manter as informações atualizadas e evitar anúncios inválidos    |
+| Profª. Drª. Helena Medeiros (Docente Pesquisadora) | Associar meu perfil ao cadastro da minha feira                | Garantir que eu possa publicar produtos em nome da minha empresa |
+| Prof. Dr. Ricardo Barros (Docente em Início de Carreira) | Ter minhas ofertas excluídas automaticamente após a validade  | Evitar problemas com consumidores e manter a confiança           |
+| Prof. Dr. Ricardo Barros (Docente em Início de Carreira) | Visualizar a média de avaliação da minha feira                | Acompanhar minha reputação e planejar melhorias nas vendas       |
 
 
 ## Busca e Compra de Produtos (Consumidores)
