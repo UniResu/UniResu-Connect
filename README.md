@@ -13,10 +13,10 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 ### **Integrantes**
 
 * Juliana Gimenes Müller
+* Matheus
 * 
-* 
-* 
-* 
+* Davi 
+* Eduarda
 * 
 
 ### **Orientador**
