@@ -104,10 +104,10 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 | -------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------- |
 | Drª. Carolina Lima (Pesquisadora Focada em Segurança) | preciso de um sistema de mensagens interno na plataforma para o contato inicial com candidatos             | para proteger minhas informações pessoais (e-mail, telefone) e evitar comunicações inadequadas       |
 | Drª. Carolina Lima (Pesquisadora Focada em Segurança) | preciso que a plataforma exija autenticação via login institucional |para garantir que estou interagindo apenas com estudantes verificados da comunidade acadêmica     |
-| Profª. Drª. Helena Medeiros (Docente Pesquisadora) | Editar ou excluir minhas próprias ofertas                     | Manter as informações atualizadas e evitar anúncios inválidos    |
-| Profª. Drª. Helena Medeiros (Docente Pesquisadora) | Associar meu perfil ao cadastro da minha feira                | Garantir que eu possa publicar produtos em nome da minha empresa |
-| Prof. Dr. Ricardo Barros (Docente em Início de Carreira) | Ter minhas ofertas excluídas automaticamente após a validade  | Evitar problemas com consumidores e manter a confiança           |
-| Prof. Dr. Ricardo Barros (Docente em Início de Carreira) | Visualizar a média de avaliação da minha feira                | Acompanhar minha reputação e planejar melhorias nas vendas       |
+| Profª. Drª. Helena Medeiros (Docente Pesquisadora) | preciso de um formulário simples e rápido para publicar novas vagas                     | para reduzir o tempo gasto com burocracia e focar na minha pesquisa  |
+| Profª. Drª. Helena Medeiros (Docente Pesquisadora) | preciso definir pré-requisitos obrigatórios (como curso, período ou habilidades) no anúncio da vaga |  para que o sistema filtre automaticamente os candidatos que não atendem aos critérios mínimos |
+| Prof. Dr. Ricardo Barros (Docente em Início de Carreira) |  preciso que minha vaga tenha a mesma visibilidade que os projetos de pesquisadores já estabelecidos  | para garantir uma competição justa por talentos e dar um bom início ao meu projeto de extensão  |
+| Prof. Dr. Ricardo Barros (Docente em Início de Carreira) | preciso que a plataforma permita a divulgação para estudantes de diferentes cursos | para alcançar um público amplo e interdisciplinar que possa se interessar pelo tema |
 
 
 ## Busca e Compra de Produtos (Consumidores)
