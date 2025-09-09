@@ -110,12 +110,12 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 | Prof. Dr. Ricardo Barros (Docente em Início de Carreira) | preciso que a plataforma permita a divulgação para estudantes de diferentes cursos | para alcançar um público amplo e interdisciplinar que possa se interessar pelo tema |
 
 
-## Busca e Compra de Produtos (Consumidores)
+## Busca e Cadastro de Alunos Universitários
 
 | EU COMO... `PERSONA`               | QUERO/PRECISO ... `FUNCIONALIDADE`                                    | PARA ... `MOTIVO/VALOR`                                            |
 | ---------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Clara (Consumidora de baixa renda) | Criar minha conta com endereço completo                               | Ter acesso a ofertas próximas de onde moro                         |
-| Clara (Consumidora de baixa renda) | Visualizar cards de ofertas com foto, preço e validade                | Economizar nas compras semanais com confiança na qualidade         |
+| Lucas Alves (Estudante 1º período) | preciso visualizar todas as oportunidades de pesquisa em um único lugar | para não perder nenhuma vaga e economizar tempo de busca em vários canais |
+| Lucas Alves (Estudante 1º período) | preciso de um filtro ou uma tag para projetos que aceitam iniciantes   | para encontrar vagas compatíveis com meu nível de conhecimento e aumentar minhas chances de ser selecionado.  |
 | Clara (Consumidora de baixa renda) | Receber apenas ofertas ainda válidas                                  | Garantir que os alimentos estejam próprios para consumo            |
 | João (Consumidor consciente)       | Pesquisar e filtrar produtos por nome ou categoria                    | Localizar rapidamente itens que desejo comprar                     |
 | João (Consumidor consciente)       | Acessar informações completas da empresa (nome, endereço, avaliações) | Garantir que compro de feirantes confiáveis e sustentáveis         |
