@@ -6,11 +6,11 @@
 
 *Persona 1 – Lucas Alves*
 
-Idade: 18 anos
-Profissão: Estudante Universitário
-Localização: Belo Horizonte – MG
-Formação: Ensino Superior em andamento
-Objetivo: Iniciar em um projeto de pesquisa
+- Idade: 18 anos
+- Profissão: Estudante Universitário
+- Localização: Belo Horizonte – MG
+- Formação: Ensino Superior em andamento
+- Objetivo: Iniciar em um projeto de pesquisa
 
 Descrição:
 Estudante do primeiro período de Engenharia de Computação, 18 anos. É proativo e possui grande interesse em participar da vida acadêmica, mas sente-se desorientado pela falta de um ponto de partida claro e de uma rede de contatos na universidade.
@@ -21,17 +21,16 @@ A informação sobre projetos é pulverizada em diversos canais, tornando o acom
 Expectativas:
 Encontrar uma plataforma única que centralize todas as oportunidades e ter acesso a projetos com baixa barreira de entrada, ideais para uma primeira experiência.
 
-
 *Persona 2 – Juliana Costa*
 
-Idade: 26 anos
-Profissão: Estudante Universitária
-Localização: São Paulo – SP
-Formação: Ensino Superior em andamento
-Objetivo: Primeira experiência acadêmica apra enriquecer seu currículo em uma iniciação científica.
+- Idade: 26 anos
+- Profissão: Estudante Universitária
+- Localização: São Paulo – SP
+- Formação: Ensino Superior em andamento
+- Objetivo: Primeira experiência acadêmica apra enriquecer seu currículo em uma iniciação científica.
 
 Descrição:
-Aluna do sétimo período de Relações Internacionais, 26 anos. Está focada em sua carreira e busca uma experiência de pesquisa de alto impacto para enriquecer seu currículo para uma futura pós-graduação.
+Aluna do sétimo período de Medicina, 26 anos. Está focada em sua carreira e busca uma experiência de pesquisa de alto impacto para enriquecer seu currículo para uma futura pós-graduação.
 
 Dores:
 Perde muito tempo filtrando oportunidades irrelevantes para seus objetivos específicos e acha frequentemente vagas interessantes sem uma descrição, impedindo uma avaliação clara do escopo do trabalho.
@@ -40,11 +39,11 @@ Expectativas: Utilizar filtros de busca avançados para encontrar rapidamente va
 
 *Persona 3 – Profª. Drª. Helena Medeiros (Docente Pesquisadora Estabelecida)*
 
-Idade: 48 anos
-Profissão: Professora e Pesquisadora Universitária
-Localização: Rio de Janeiro – RJ
-Formação: Pós-doutorado completo
-Objetivo: Recrutar estudantes empenhados a produzir materiais para pesquisas e que buscam seguir a carreira acadêmica.
+- Idade: 48 anos
+- Profissão: Professora e Pesquisadora Universitária
+- Localização: Rio de Janeiro – RJ
+- Formação: Pós-doutorado completo
+- Objetivo: Recrutar estudantes empenhados a produzir materiais para pesquisas e que buscam seguir a carreira acadêmica.
 
 Descrição:
 Pesquisadora do Departamento de Biologia e professora adjunta, 48 anos. Coordena um laboratório com múltiplos projetos e considera o recrutamento de alunos um ônus administrativo que consome tempo de pesquisa.
@@ -59,11 +58,11 @@ Receber candidaturas mais qualificadas através de pré-requisitos claros.
 
 *Persona 4 – Prof. Dr. Ricardo Barros (Docente em Início de Carreira)*
 
-Idade: 34 anos
-Profissão: Professor e Pesquisador Universitário
-Localização: Manaus – AM 
-Formação: Pós-graduação concluída
-Objetivo: Divulgar para estudantes seu projeto de extensão
+- Idade: 34 anos
+- Profissão: Professor e Pesquisador Universitário
+- Localização: Manaus – AM 
+- Formação: Pós-graduação concluída
+- Objetivo: Divulgar para estudantes seu projeto de extensão
 
 Descrição:
 Professor recém-contratado do Departamento de Letras, 34 anos. Está motivado para iniciar seu primeiro projeto de extensão, mas não possui uma rede de contatos com os estudantes e teme que seu projeto não tenha visibilidade.
@@ -78,11 +77,11 @@ Alcançar um público amplo e interdisciplinar de estudantes que possam se inter
 
 *Persona 5 – Drª. Carolina Lima (Pesquisadora Focada em Segurança)*
 
-Idade: 32 anos
-Profissão: Pesquisadora
-Localização: Pernambuco - PE
-Formação: Pós-doutorado em andamento
-Objetivo: Utilização de um ambiente profissional seguro e formal desde o primeiro contato
+- Idade: 32 anos
+- Profissão: Pesquisadora
+- Localização: Pernambuco - PE
+- Formação: Pós-doutorado em andamento
+- Objetivo: Utilização de um ambiente profissional seguro e formal desde o primeiro contato
 
 Descrição:
 Drª. Carolina Lima, 32 anos, é uma pesquisadora de pós-doutorado no Instituto de Química. Recentemente, conseguiu financiamento para seu primeiro projeto de iniciação científica e busca recrutar uma aluna ou aluno. Como uma mulher jovem em uma posição de liderança acadêmica, ela se preocupa com a dinâmica de poder e preza pela criação de um ambiente profissional seguro e formal desde o primeiro contato.
@@ -93,6 +92,27 @@ Exposição e Vulnerabilidade: Sente-se desconfortável em divulgar seu e-mail e
 Expectativas:
 Ambiente Controlado e Verificado, espera uma plataforma de acesso restrito à comunidade acadêmica (com login institucional), garantindo que todos os usuários são estudantes verificados. 
 Deseja que a comunicação inicial ocorra dentro da plataforma, protegendo suas informações de contato direto até que ela se sinta segura para compartilhar.
+
+Persona 6 – Mariana Oliveira
+- Idade: 22 anos
+- Profissão: Estudante Universitária e Estagiária
+- Localização: Curitiba – PR
+- Formação: Ensino Superior em andamento (Arquitetura e Urbanismo)
+- Objetivo: Encontrar um orientador e um projeto de pesquisa que possa ser aproveitado como Trabalho de Conclusão de Curso (TCC).
+
+Descrição:
+Mariana está no oitavo período de Arquitetura e Urbanismo e já sente a pressão do TCC se aproximando. Ela trabalha como estagiária em um escritório 20 horas por semana para ajudar nas despesas e ganhar experiência profissional. É uma aluna dedicada e organizada, mas a dupla jornada torna seu tempo extremamente limitado.
+
+Dores:
+Acha difícil encontrar um professor orientador cuja linha de pesquisa se alinhe com seus interesses para o TCC e que, ao mesmo tempo, tenha disponibilidade para novos orientandos.
+Teme se engajar em um projeto de iniciação científica que, no final, não possa ser validado ou aproveitado como parte do seu TCC, o que seria um grande desperdício de seu tempo escasso.
+Necessidade Financeira: Uma bolsa de pesquisa seria o ideal para que ela pudesse reduzir as horas no estágio e se dedicar mais à vida acadêmica, mas as informações sobre bolsas são difíceis de encontrar e muitas vezes atreladas a projetos que não lhe interessam.
+
+Expectativas:
+
+Uma plataforma onde possa buscar professores não apenas por área de pesquisa, mas também por "disponibilidade para orientação de TCC".
+Encontrar projetos que indiquem claramente se há flexibilidade para adaptar o escopo e aproveitá-lo para o TCC.
+Ter acesso a filtros claros sobre a disponibilidade de bolsas e a carga horária semanal esperada, para que possa conciliar a pesquisa com seu trabalho.
 
 # Histórias de Usuários
 
@@ -115,14 +135,14 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 | EU COMO... `PERSONA`               | QUERO/PRECISO ... `FUNCIONALIDADE`                                    | PARA ... `MOTIVO/VALOR`                                            |
 | ---------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | Lucas Alves (Estudante 1º período) | preciso visualizar todas as oportunidades de pesquisa em um único lugar | para não perder nenhuma vaga e economizar tempo de busca em vários canais |
-| Lucas Alves (Estudante 1º período) | preciso de um filtro ou uma tag para projetos que aceitam iniciantes   | para encontrar vagas compatíveis com meu nível de conhecimento e aumentar minhas chances de ser selecionado.  |
-| Clara (Consumidora de baixa renda) | Receber apenas ofertas ainda válidas                                  | Garantir que os alimentos estejam próprios para consumo            |
-| João (Consumidor consciente)       | Pesquisar e filtrar produtos por nome ou categoria                    | Localizar rapidamente itens que desejo comprar                     |
-| João (Consumidor consciente)       | Acessar informações completas da empresa (nome, endereço, avaliações) | Garantir que compro de feirantes confiáveis e sustentáveis         |
-| João (Consumidor consciente)       | Avaliar feirantes com notas e comentários                             | Ajudar a comunidade e incentivar boas práticas                     |
-| Luana (Estudante universitária)    | Navegar no feed de ofertas pelo celular                               | Conciliar minha rotina corrida com hábitos de alimentação saudável |
-| Luana (Estudante universitária)    | Ter carregamento rápido nas páginas (≤2s)                             | Não perder tempo durante o uso da aplicação                        |
-| Luana (Estudante universitária)    | Ver data/hora de criação das ofertas                                  | Confiar que as informações estão atualizadas e corretas            |
+| Lucas Alves (Estudante 1º período) | preciso de um filtro ou uma tag para projetos que aceitam iniciantes | para encontrar vagas compatíveis com meu nível de conhecimento e aumentar minhas chances de ser selecionado. |
+| Lucas Alves (Estudante 1º período) | preciso de um sistema de candidatura simplificado e direto na plataforma |para formalizar meu interesse de maneira segura e sem a necessidade de enviar e-mails repetitivos aos orientadores dos projetos |
+| Juliana Costa (Universitária com foco se tornar pesquisadora)       | preciso acessar descrições de vagas detalhadas, com pré-requisitos, atividades e resultados esperados | para tomar decisões informadas e não perder tempo com candidaturas inadequadas  |
+| Juliana Costa (Universitária com foco se tornar pesquisadora)      | preciso de um Forum para interação com pesquisadores, alunos e professores de diversas áreas | para esclarecer dúvidas sobre os projetos e iniação científica |
+| Juliana Costa (Universitária com foco se tornar pesquisadora)       | preciso de um Forum seguro para interações profissionais e amigáveis com outros estudantes universitários  | para compartilhar conhecimento, interagir, motivar e ajudar a comunidade científica  |
+| Mariana Oliveira (Estudante com Foco no TCC)   | preciso de um filtro para buscar projetos que declaram explicitamente a possibilidade de aproveitamento para o Trabalho de Conclusão de Curso  | para otimizar minha busca e investir meu esforço em uma oportunidade com duplo benefício |
+| Mariana Oliveira (Estudante com Foco no TCC) | preciso visualizar claramente a carga horária semanal exigida e se o projeto oferece bolsa |  para tomar uma decisão realista que se encaixe na minha rotina e orçamento. |
+| Mariana Oliveira (Estudante com Foco no TCC) | preciso acessar o perfil dos professores na plataforma, com suas linhas de pesquisa e um indicador de "disponibilidade para orientação de TCC" | para encontrar o orientador ideal de forma mais direta e que se alinhe com a minha prosta de TCC. |
 
 
 # Requisitos
