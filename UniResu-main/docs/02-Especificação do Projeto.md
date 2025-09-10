@@ -153,38 +153,42 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-------------------------|----|
-|RF-001| A aplicação deve permitir o **cadastro de pessoa** (nome, e-mail, senha, endereço completo: logradouro, número, bairro, cidade, UF, CEP). | ALTA |
+|RF-001| O sistema deve permitir que novos usuários (alunos, professores, pesquisadores) se cadastrem na plataforma | ALTA |
 |RF-002| A aplicação deve permitir a **autenticação** do usuário (login/logout) | ALTA |
-|RF-003| A aplicação deve permitir o **cadastro de empresa/feira** com **CNPJ obrigatório** e **endereço completo** (logradouro, número, bairro, cidade, UF, CEP). | ALTA |
-|RF-004| O backend deve **validar o CNPJ** (formato e dígito verificador) no cadastro/edição de empresa. | ALTA |
-|RF-005| A aplicação deve permitir que um usuário autenticado se **associe ao perfil de feirante (empresa)** para **publicar ofertas**. | ALTA |
-|RF-006| O backend deve **validar a cidade** do usuário e **retornar apenas feiras/ofertas da mesma cidade** do endereço da pessoa. | ALTA |
-|RF-007| A aplicação deve disponibilizar uma **tela de ofertas** (feed) para pesquisa/visualização de **posts da mesma cidade** do usuário. | ALTA |
-|RF-008| A criação de **post de oferta** deve permitir: **foto** do produto (obrigatória), nome, descrição, **data de validade**, **preço promocional** e **quantidade**. | ALTA |
-|RF-009| Cada **card de oferta** deve exibir: **foto**, nome do produto, preço, **data de validade**, **nome da empresa** e **média de avaliação** da empresa. | ALTA |
-|RF-010| Ao **clicar no card**, o usuário deve visualizar a **página da empresa/feira** (nome, CNPJ mascarado, endereço, contato/horário se houver), **ofertas ativas** e **avaliações**. | ALTA |
-|RF-011| A aplicação deve permitir que usuários autenticados **avaliem a empresa** (nota **1 a 5 estrelas** e **comentário**). | ALTA |
-|RF-012| O sistema deve **persistir avaliações** em tabela própria **idEmpresa, nota, descrição**. | ALTA |
-|RF-013| O sistema deve **recalcular e atualizar** o campo **MediaNota** na tabela **Empresa** a cada **inserção/edição/exclusão** de avaliação. | ALTA |
-|RF-014| A **listagem de ofertas** deve **exibir somente** posts com **validade = data atual + 1 dia** (“vencem amanhã”). | ALTA |
-|RF-015| Ofertas com **validade ≤ data atual** não devem ser listadas; se a validade for o **dia atual**, o **anúncio deve ser excluído automaticamente** pelo sistema. | ALTA |
-|RF-016| O feed de ofertas deve permitir **busca por termo** (ex.: “tomate”). | MÉDIA |
-|RF-017| A aplicação deve **paginar** a listagem de ofertas. | MÉDIA |
-|RF-018| O feirante deve poder **editar** e **excluir** suas próprias ofertas. | MÉDIA |
-|RF-019| A aplicação deve **impedir avaliações anônimas** e **limitar** múltiplas avaliações por usuário/empresa. | MÉDIA |
-|RF-020| O sistema deve **registrar data/hora de criação e atualização** para pessoa, empresa, oferta e avaliação. | MÉDIA |
+|RF-003| Deve haver um sistema para recuperação de senha | ALTA |
+|RF-004| O sistema deve permitir que os usuários tenham um perfil, possivelmente com informações acadêmicas | ALTA |
+|RF-005| Professores e pesquisadores devem poder cadastrar e publicar projetos de pesquisa, grupos de estudo e outras oportunidades acadêmicas | ALTA |
+|RF-006| Os usuários devem poder visualizar uma lista de projetos disponíveis | ALTA |
+|RF-007| O sistema deve permitir a busca e a filtragem de projetos (por área de interesse, por universidade, etc.) | ALTA |
+|RF-008| Os usuários devem poder se inscrever ou demonstrar interesse nos projetos | ALTA |
+|RF-009| O sistema deve possuir um fórum onde os usuários podem criar tópicos de discussão | ALTA |
+|RF-010| Os usuários devem poder responder a tópicos existentes | ALTA |
+|RF-011| Deve ser possível pesquisar por tópicos ou palavras-chave no fórum | ALTA |
+|RF-012| O sistema deve exibir uma seção "Quem Somos" com informações sobre a iniciativa UniResu | Baixa |
+|RF-013| O sistema deve disponibilizar uma área com materiais e informações sobre escrita científica | ALTA |
+|RF-014| O sistema deve possuir uma página inicial (Homepage) que destaque as principais funcionalidades e oportunidades | ALTA |
+|RF-015|  | ALTA |
+|RF-016|  | MÉDIA |
+|RF-017| | MÉDIA |
+|RF-018|  | MÉDIA |
+|RF-019|  | MÉDIA |
+|RF-020|  | MÉDIA |
 
 # Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  | Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser **responsiva** e funcionar nos principais navegadores modernos. | ALTA |
+|RNF-001| A interface do site deve ser intuitiva e de fácil navegação para que os usuários encontrem rapidamente as informações que procuram | ALTA |
 |RNF-002| **Desempenho**: páginas de listagem (ofertas) devem responder em até **2 s** em condições normais (até 100 usuários simultâneos). | ALTA |
-|RNF-003| **Validação de dados**: CNPJ deve ter **formato e dígitos verificadores** válidos; CEP em padrão nacional. | ALTA |
-|RNF-004| **Confiabilidade**: a exclusão automática de ofertas do dia deve ocorrer via **tarefa agendada** confiável. | ALTA |
-|RNF-005| **Usabilidade**: ações principais (buscar oferta e abrir card) devem ocorrer em **até 3 cliques** a partir da home. | MÉDIA |
-|RNF-006| **Compatibilidade de mídia**: aceitar upload de **imagem** em JPG/PNG/WebP com **limite de tamanho** (ex.: 2 MB). | MÉDIA |
-|RNF-007| **Proteção contra abuso**: limitar **tamanho do comentário** (ex.: 200 caracteres) e aplicar **rate-limit** para avaliações/edições. | BAIXA |
+|RNF-003| O design deve ser responsivo, adaptando-se a diferentes tamanhos de tela, como desktops, tablets e smartphones | ALTA |
+|RNF-004| O site deve utilizar o protocolo HTTPS para garantir a comunicação segura e a proteção dos dados dos usuários | ALTA |
+|RNF-005| As senhas dos usuários devem ser armazenadas de forma criptografada no banco de dados | MÉDIA |
+|RNF-006| O sistema deve ser protegido contra ataques comuns, como injeção de SQL e Cross-Site Scripting (XSS) | MÉDIA |
+|RNF-007| **Proteção contra abuso**: limitar **tamanho do comentário** (ex.: 200 caracteres) e aplicar **rate-limit** para avaliações/edições. | BAIXA | 
+|RNF-008| O sistema deve suportar um número crescente de usuários e postagens simultâneas sem degradação significativa da performance | BAIXA| 
+|RNF-009| O site deve ser compatível e funcionar corretamente nas versões mais recentes dos principais navegadores (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge) | MÉDIA | 
+|RNF-010|A plataforma deve estar disponível para acesso 24 horas por dia, 7 dias por semana, com um tempo de inatividade mínimo | MÉDIA | 
+|RNF-011| O site deve seguir as diretrizes de acessibilidade (WCAG) para ser utilizável por pessoas com deficiência, permitindo, por exemplo, a navegação via teclado e o uso de leitores de tela | MÉDIA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -195,7 +199,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|02|         |
 
 # Diagrama de Casos de Uso
 
