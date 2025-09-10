@@ -13,15 +13,17 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 ### **Integrantes**
 
 * Juliana Gimenes Müller
-* Matheus
-* 
-* Davi 
-* Eduarda
-* 
+* Matheus Gabriel Ramos
+* Maria Eduarda Siqueira
+* Davi Lopes
+* Ana Laura 
+* Lucas Sanches
+* Murilo
 
-### **Orientador**
+### **Orientadores**
 
-* Prof. Dr. xxxx
+* Prof. Dr. Carlos Eduardo Raymundo
+* Prof. Dr. Thayse Moraes
 
 ---
 
