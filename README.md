@@ -16,7 +16,7 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 * Matheus Gabriel Ramos
 * Maria Eduarda Siqueira
 * Davi Lopes
-* Ana Laura 
+* Ana Laura Santos
 * Lucas Sanches
 * Murilo
 
