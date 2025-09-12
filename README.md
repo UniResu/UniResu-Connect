@@ -50,7 +50,7 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 
 ### **Documentação**
 
-* [Documentação de Contexto](#)
+* [Documentação de Contexto](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/01-Documenta%C3%A7%C3%A3o%20de%20Contexto.md)
 * [Especificação do Projeto](#)
 * [Metodologia (Scrum)](#)
 * [Projeto de Interface (UI/UX)](#)
