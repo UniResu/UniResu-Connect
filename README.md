@@ -51,18 +51,18 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 ### **Documentação**
 
 * [Documentação de Contexto](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/01-Documenta%C3%A7%C3%A3o%20de%20Contexto.md)
-* [Especificação do Projeto](#)
-* [Metodologia (Scrum)](#)
-* [Projeto de Interface (UI/UX)](#)
-* [Arquitetura da Solução](#)
-* [Template Padrão da Aplicação](#)
-* [Programação de Funcionalidades](#)
-* [Plano de Testes de Software](#)
-* [Registro de Testes de Software](#)
-* [Plano de Testes de Usabilidade](#)
-* [Registro de Testes de Usabilidade](#)
-* [Apresentação do Projeto](#)
-* [Referências](#)
+* [Especificação do Projeto](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md)
+* [Metodologia (Scrum)](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/03-Metodologia.md)
+* [Projeto de Interface (UI/UX)](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/04-Projeto%20de%20Interface.md)
+* [Arquitetura da Solução](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/05-Arquitetura%20da%20Solu%C3%A7%C3%A3o.md)
+* [Template Padrão da Aplicação](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/06-Template%20Padr%C3%A3o%20da%20Aplica%C3%A7%C3%A3o.md)
+* [Programação de Funcionalidades](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/07-Programa%C3%A7%C3%A3o%20de%20Funcionalidades.md)
+* [Plano de Testes de Software](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/08-Plano%20de%20Testes%20de%20Software.md)
+* [Registro de Testes de Software](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/09-Registro%20de%20Testes%20de%20Software.md)
+* [Plano de Testes de Usabilidade](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/10-Plano%20de%20Testes%20de%20Usabilidade.md)
+* [Registro de Testes de Usabilidade](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/11-Registro%20de%20Testes%20de%20Usabilidade.md)
+* [Apresentação do Projeto](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/12-Apresenta%C3%A7%C3%A3o%20do%20Projeto.md)
+* [Referências](https://github.com/UniResu-Connect/UniResu/blob/main/UniResu-main/docs/13-Refer%C3%AAncias.md)
 
 ### **Código**
 
