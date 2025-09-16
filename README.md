@@ -75,4 +75,4 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 
 # 📝 Licença
 
-Distribuído sob a Licença MIT. Veja LICENSE para mais informações.
+Distribuído sob a Licença MIT. Veja [LICENSE](https://github.com/UniResu/UniResu-Connect/blob/main/LICENSE) para mais informações.
