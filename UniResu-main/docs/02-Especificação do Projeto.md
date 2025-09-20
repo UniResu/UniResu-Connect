@@ -198,8 +198,27 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02|         |
+|RST-001| O sistema será desenvolvido inicialmente como aplicação web; aplicativos móveis nativos não estão contemplados nesta fase |
+|RST-002| O acesso à plataforma será limitado a usuários com vínculo acadêmico verificado (login institucional)    |
+|RST-003| O sistema não contemplará integração com plataformas externas de pagamento ou bolsas nesta versão    |
+|RST-004| O processo de candidatura será interno à plataforma (sem envio de e-mails diretos)    |
+|RST-005| O sistema não proverá gestão de documentos acadêmicos (como submissão de artigos ou relatórios finais)    |
+|RST-006| O sistema não terá moderação automatizada de conteúdo no fórum; a moderação será inicial e manual    |
+|RST-007| A comunicação inicial entre professores e alunos será restrita a mensagens dentro da plataforma    |
+|RST-008| A plataforma não garante a oferta de bolsas ou financiamento; essa informação dependerá do cadastramento feito pelos professores    |
+|RST-009| A plataforma não permitirá qualquer tipo de violência e preconceito, esses atos ocasionarão a expulsão permanente do usuário na plataforma  |
+|RST-010| O sistema não terá integração direta com sistemas acadêmicos de matrícula ou secretaria  |
+|RST-011| O sistema não realizará validação automática da disponibilidade real dos orientadores  |
+|RST-012| A plataforma não fornecerá serviços de chat em tempo real (apenas mensagens assíncronas)  |
+|RST-013| O sistema não oferecerá recomendações automáticas baseadas em inteligência artificial na versão inicial  |
+|RST-014| A autenticação será limitada a usuários internos de universidades cadastradas; pessoas externas não poderão acessar  |
+|RST-015| O sistema não realizará análise automática de currículos ou perfis dos alunos  |
+|RST-016| A comunicação entre estudantes não incluirá mensagens privadas diretas fora do fórum  |
+|RST-017| O sistema não fará validação automática da veracidade de projetos cadastrados  |
+|RST-018|   |
+|RST-019|   |
+|RST-020|  |
+
 
 # Diagrama de Casos de Uso
 
