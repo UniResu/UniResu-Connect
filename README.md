@@ -1,4 +1,4 @@
-<img width="85" height="154" alt="image" src="https://github.com/user-attachments/assets/8aaf1818-6973-47fc-a122-e52e872f0865" /># UniResu Connect
+# UniResu Connect
 
 **Projeto de Extensão e Pesquisa**
 <br>
