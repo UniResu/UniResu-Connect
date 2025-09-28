@@ -1,4 +1,4 @@
-# UniResu Connect
+<img width="85" height="154" alt="image" src="https://github.com/user-attachments/assets/8aaf1818-6973-47fc-a122-e52e872f0865" /># UniResu Connect
 
 **Projeto de Extensão e Pesquisa**
 <br>
@@ -16,14 +16,14 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 
 ### **Integrantes**
 
-* Juliana Gimenes Müller
-* Matheus Gabriel Ramos de Melo
-* Maria Eduarda Siqueira de Sequeiros
-* Davi Lopes Rodrigues
 * Ana Laura Santos Romagnoli Pires
-* Lucas Eduardo Sanches Cordeiro
-* José Murilo Almeida do Nascimento
 * Daniel Pereira Santos da Silva
+* Davi Lopes Rodrigues
+* José Murilo Almeida do Nascimento
+* Juliana Gimenes Müller
+* Lucas Eduardo Sanches Cordeiro
+* Maria Eduarda Siqueira de Sequeiros
+* Matheus Gabriel Ramos de Melo
 * Pedro de Magalhães Leitão
 
 ### **Orientadores**
