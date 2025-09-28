@@ -213,7 +213,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-013| O sistema não oferecerá recomendações automáticas baseadas em inteligência artificial na versão inicial  |
 |RST-014| A autenticação será limitada a usuários internos de universidades cadastradas; pessoas externas não poderão acessar  |
 |RST-015| O sistema não realizará análise automática de currículos ou perfis dos alunos  |
-|RST-016| A comunicação entre estudantes não incluirá mensagens privadas diretas fora do fórum  |
+|RST-016| O sistema não mediará interações entre os participantes fora do forum, como mensagens privadas diretas |
 |RST-017| O sistema não fará validação automática da veracidade de projetos cadastrados  |
 |RST-018|   |
 |RST-019|   |
