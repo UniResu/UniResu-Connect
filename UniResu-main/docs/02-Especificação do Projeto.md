@@ -204,7 +204,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-004| O processo de candidatura será interno à plataforma (sem envio de e-mails diretos)    |
 |RST-005| O sistema não proverá gestão de documentos acadêmicos (como submissão de artigos ou relatórios finais)    |
 |RST-006| O sistema não terá moderação automatizada de conteúdo no fórum; a moderação será inicial e manual    |
-|RST-007| A comunicação inicial entre professores e alunos será restrita a mensagens dentro da plataforma    |
+|RST-007| A comunicação inicial entre professores e alunos será restrita a interações dentro da plataforma    |
 |RST-008| A plataforma não garante a oferta de bolsas ou financiamento; essa informação dependerá do cadastramento feito pelos professores    |
 |RST-009| A plataforma não permitirá qualquer tipo de violência e preconceito, esses atos ocasionarão a expulsão permanente do usuário na plataforma  |
 |RST-010| O sistema não terá integração direta com sistemas acadêmicos de matrícula ou secretaria  |
