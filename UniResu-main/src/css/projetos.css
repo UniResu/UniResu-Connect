@@ -214,7 +214,6 @@ body {
   margin-top: 40px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;

@@ -4,46 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar - UniResu</title>
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="./UniResu-main/docs/img/uniresulogo.png" alt="Logo UniResu">
+                <img src="../assets/img/uniresulogo.png" alt="Logo UniResu">
             </div>
             <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#quem-somos">Quem Somos</a></li>
-                <li><a href="index.html#projetos">Projetos Acadêmicos</a></li>
-                <li><a href="index.html#forum">Forum</a></li>
+                <li><a href="./index.html#home">Home</a></li>
+                <li><a href="./index.html#quem-somos">Quem Somos</a></li>
+                <li><a href="./projetos.html#projetos">Projetos Acadêmicos</a></li>
+                <li><a href="./forum.html#forum">Fórum</a></li>
             </ul>
         </nav>
     </header>
+
     <main class="register-page">
         <div class="register-container">
             <div class="register-header">
                 <h2>Registre-se</h2>
-                <button class="login-btn">Login</button>
+                <a href="login.html" class="login-btn">Login</a>
             </div>
+
             <form class="register-form">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
                 <label for="instituicao">Instituição</label>
                 <input type="text" id="instituicao" placeholder="Ex: UERJ, USP..." required>
+
                 <label for="nome">Nome Completo</label>
                 <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
                 <label for="vinculo">Vínculo Institucional</label>
                 <select id="vinculo" required>
                     <option value="professor">Professor</option>
                     <option value="aluno">Aluno</option>
                     <option value="pesquisador">Pesquisador</option>
                 </select>
+
                 <div class="checkbox-group">
                     <label><input type="checkbox" required> Declaro estar ciente das regras de utilização da plataforma</label>
                     <label><input type="checkbox" required> Declaro estar ciente do compartilhamento de dados</label>
                 </div>
+
                 <button type="submit" class="btn-primary">Registrar</button>
             </form>
         </div>

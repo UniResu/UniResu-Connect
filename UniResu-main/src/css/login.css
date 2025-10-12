@@ -35,7 +35,6 @@
     color: #cb89e0;
 }
 
-/* Botão */
 .btn {
     padding: 10px 20px;
     border-radius: 5px;
@@ -75,7 +74,6 @@
     background-color: #f4f4f4;
 }
 
-/* Menu Hamburger*/
 .hamburger {
     display: none;
     font-size: 24px;
@@ -174,7 +172,6 @@
     background-color: #6b1db7;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
 
     .nav-links,
