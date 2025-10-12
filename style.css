@@ -73,16 +73,18 @@ body {
     background-color: white;
     color: #7504aa;
     font-weight: bold;
+    
 }
 
 .btn-primary:hover {
     background-color: #f0f0f0;
 }
 
-/* Seção Hero */
-.hero {
+/* Seção Home */
+.home {
     height: 100vh;
-    background-image: linear-gradient(#3c0453, #4c05687f), url('https://uniresu.org/wp-content/uploads/2023/04/imagem-banner.jpg');
+    background-image: linear-gradient(#3c0453, #4c05687f),
+        url('https://uniresu.org/wp-content/uploads/2023/04/imagem-banner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -92,17 +94,17 @@ body {
     color: white;
 }
 
-.hero-content {
+.home-content {
     max-width: 800px;
     padding: 20px;
 }
 
-.hero h1 {
+.home h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.hero p {
+.home p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -111,12 +113,13 @@ body {
 .content-section {
     padding: 60px 5%;
     text-align: center;
+    background-color: rgb(198, 192, 199);
 }
 
 .content-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #2a2a72;
+    color: #520f65;
 }
 
 .bg-light {
@@ -156,22 +159,6 @@ body {
     font-weight: bold;
 }
 
-/*Números/Estatísticas
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #852fb0;
-} */
-
 footer {
     background: #50067e;
     color: white;
@@ -189,39 +176,113 @@ footer {
     cursor: pointer;
 }
 
-/* Media Queries */
+.projetos-section {
+    background-color: #fff;
+    color: #222;
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.titulo-projetos {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4c0568;
+}
+
+.subtitulo-projetos {
+    color: #7b2cbf;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Lista de projetos */
+.lista-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.projeto-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-info {
+    text-align: left;
+    max-width: 65%;
+}
+
+.projeto-info h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.projeto-info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.projeto-detalhes {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.projeto-detalhes .tipo {
+    color: #e15cff;
+    font-weight: 600;
+}
+
+.botao-explorar {
+    margin-top: 20px;
+}
+
+.btn-explorar {
+    background-color: #a242b5;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explorar:hover {
+    background-color: #dd43e6;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-
-    .nav-links,
-    .nav-button {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
+    .projeto-card {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #5f088a;
-        text-align: center;
+        text-align: left;
+        gap: 15px;
     }
 
-    .nav-links.active li {
-        margin: 15px 0;
+    .projeto-info,
+    .projeto-detalhes {
+        max-width: 100%;
+        text-align: left;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .stats-container {
-        flex-direction: column;
-        gap: 30px;
+    .projeto-detalhes {
+        align-items: flex-start;
     }
 }

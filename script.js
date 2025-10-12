@@ -1,35 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu Hamburger
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
-    
-    // Animação de contagem dos números
-    const statNumbers = document.querySelectorAll('.stat-number');
 
-    const animateNumber = (element) => {
-        const target = +element.getAttribute('data-target');
-        let count = 0;
-        const speed = 200; // quanto maior, mais lenta a animação
-
-        const updateCount = () => {
-            const increment = target / speed;
-            
-            if (count < target) {
-                count += increment;
-                element.innerText = Math.ceil(count);
-                setTimeout(updateCount, 1);
-            } else {
-                element.innerText = target;
-            }
-        };
-        updateCount();
-    };
-    
-    // Observer para iniciar a animação quando a seção estiver visível
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -38,10 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.5 // Inicia quando 50% do elemento está visível
+        threshold: 0.5 
     });
 
     statNumbers.forEach(number => {
         observer.observe(number);
+    });
+
+    const projetoCards = document.querySelectorAll('.projeto-card');
+
+    projetoCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = 'all 0.6s ease';
+    });
+
+    const projetosObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target); // só anima uma vez
+            }
+        });
+    }, { threshold: 0.2 });
+
+    projetoCards.forEach(card => projetosObserver.observe(card));
+
+    // Rolagem suave entre seções
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const destino = document.querySelector(this.getAttribute('href'));
+            if (destino) {
+                destino.scrollIntoView({ behavior: 'smooth' });
+            } else if (this.getAttribute('href') === '#home') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
     });
 });
