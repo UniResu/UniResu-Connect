@@ -1,0 +1,56 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Roda sempre que fizer push na branch main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # Instala Node (caso queira usar build futuramente)
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Instalar dependências (opcional, se já tiver package.json)
+      - name: Instalar dependências
+        run: npm ci || npm install
+
+      # Aqui você pode adicionar seu build futuramente, ex:
+      # - name: Build do projeto
+      #   run: npm run build
+
+      # Copia os arquivos da pasta src/ para publicação
+      - name: Copiar arquivos do src/
+        run: |
+          mkdir public
+          cp -r src/* public/
+
+      # Publica os arquivos gerados na branch gh-pages
+      - name: Upload para GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
