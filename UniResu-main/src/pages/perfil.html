@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - UniResu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="../assets/img/uniresulogo.png" alt="Logo UniResu">
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#quem-somos">Quem Somos</a></li>
+            <li><a href="./projetos.html#projetos">Projetos Acadêmicos</a></li>
+            <li><a href="./forum.html#forum">Forum</a></li>
+        </ul>
+    </header>
+
+    <main class="profile-container">
+        <h1>Meu Perfil</h1>
+        <div class="profile-card">
+
+            <div class="profile-main-info">
+                <span class="profile-name">João Silva Pereira</span>
+                <button id="openModalBtn" class="edit-button">EDITAR INFORMAÇÕES</button>
+            </div>
+            <div class="profile-summary">
+                <label>Resumo Profissional</label>
+                <div class="summary-box">
+                    <div id="profileSummaryText" class="summary-display">
+                        Olá! Sou João Silva Pereira, estudante de Medicina no 2º período na Universidade do Estado
+                        do Rio de Janeiro (UERJ). Tenho grande interesse em pesquisa e colaboração na área da saúde...
+                    </div>
+                    <textarea id="professionalSummaryTextarea" class="summary-edit" style="display: none;"></textarea>
+                    <button id="saveSummaryBtn" class="save-summary-button" style="display: none;">Salvar</button>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <p><strong>Curso:</strong> Medicina</p>
+                <p><strong>Período:</strong> 2º</p>
+                <p><strong>E-mail:</strong> joaosilvapereira.aluno@uerj.br</p>
+                <p><strong>Instituição:</strong> Universidade do Estado do Rio de Janeiro</p>
+                <p><strong>Vínculo Institucional:</strong> Aluno</p>
+                <p><strong>Grau de Instrução:</strong> Graduação</p>
+                <p><strong>Currículo:</strong> <a href="#">CV_João Silva</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="editProfileModal" class="modal-overlay">
+        ...
+    </div>
+
+    <script src="../js/perfil.js"></script>
+
+</body>
+
+</html>

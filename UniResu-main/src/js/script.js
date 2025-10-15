@@ -34,14 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target); // só anima uma vez
+                observer.unobserve(entry.target); 
             }
         });
     }, { threshold: 0.2 });
 
     projetoCards.forEach(card => projetosObserver.observe(card));
 
-    // Rolagem suave entre seções
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
