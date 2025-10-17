@@ -3,21 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modalOverlay = document.getElementById('editProfileModal');
     const editProfileForm = document.getElementById('editProfileForm');
+
     const profileCourse = document.getElementById('profileCourseValue');
     const profilePeriod = document.getElementById('profilePeriodValue');
     const profileDegree = document.getElementById('profileDegreeValue');
+
     const summaryDisplay = document.getElementById('profileSummaryText');
     const summaryTextarea = document.getElementById('professionalSummaryTextarea');
     const saveSummaryBtn = document.getElementById('saveSummaryBtn');
+
     const openModal = () => {
         if (modalOverlay) modalOverlay.style.display = 'flex';
     };
-
     const closeModal = () => {
         if (modalOverlay) modalOverlay.style.display = 'none';
     };
 
-    if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+    if (openModalBtn) {
+        openModalBtn.addEventListener('click', openModal);
+    } else {
+        console.error("Erro: Botão de abrir modal (id='openModalBtn') não encontrado.");
+    }
     if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (event) => {
@@ -33,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             saveSummaryBtn.style.display = 'block';
             summaryTextarea.focus();
         });
-
         saveSummaryBtn.addEventListener('click', () => {
             summaryDisplay.textContent = summaryTextarea.value;
             summaryTextarea.style.display = 'none';
@@ -54,22 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
             alert('Informações atualizadas com sucesso!');
         });
+    } else {
+         console.error("Erro: Formulário do modal (id='editProfileForm') não encontrado.");
     }
 
     const uploadArea = document.getElementById('uploadArea');
     const fileInput = document.getElementById('cv-upload');
-    const uploadFeedback = uploadArea.querySelector('.upload-feedback');
-
+    const uploadFeedback = uploadArea ? uploadArea.querySelector('.upload-feedback') : null;
+    
     if (uploadArea && fileInput && uploadFeedback) {
         const originalUploadHTML = uploadFeedback.innerHTML;
-
+        
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
             uploadArea.addEventListener(eventName, preventDefaults, false);
         });
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
+        function preventDefaults(e) { e.preventDefault(); e.stopPropagation(); }
 
         ['dragenter', 'dragover'].forEach(eventName => {
             uploadArea.addEventListener(eventName, () => uploadArea.classList.add('drag-over'), false);
@@ -85,16 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         uploadArea.addEventListener('click', () => fileInput.click());
-        fileInput.addEventListener('change', function () {
+        fileInput.addEventListener('change', function() {
             if (this.files.length > 0) handleFile(this.files[0]);
         });
 
         function handleFile(file) {
-            const allowedTypes = [
-                'application/pdf',
-                'application/vnd.openxmlformats-officedocument.wordprocessingml.document' // .docx
-            ];
-
+            const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
             if (file && allowedTypes.includes(file.type)) {
                 const dataTransfer = new DataTransfer();
                 dataTransfer.items.add(file);
@@ -106,5 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fileInput.value = '';
             }
         }
+    } else {
+        console.warn("Aviso: Componentes de upload (id='uploadArea') não encontrados nesta página.");
     }
 });
