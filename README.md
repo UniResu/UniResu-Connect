@@ -22,7 +22,7 @@ A presente plataforma web, **UniResu Connect**, propõe-se a ser um ecossistema 
 * José Murilo Almeida do Nascimento
 * Juliana Gimenes Müller
 * Lucas Eduardo Sanches Cordeiro
-* Maria Eduarda Siqueira de Sequeiros
+* Maria Eduarda Siqueira de Medeiros
 * Matheus Gabriel Ramos de Melo
 * Pedro de Magalhães Leitão
 
