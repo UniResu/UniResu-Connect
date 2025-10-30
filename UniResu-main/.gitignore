@@ -1,0 +1,22 @@
+.env
+
+# --- Dependências (Python) ---
+# Ignora a pasta do ambiente virtual do Python ('venv').
+venv/
+
+# --- Dependências (Node.js) ---
+# Ignora os módulos do Node ('node_modules').
+node_modules/
+
+# Ignora as pastas de cache do Python.
+__pycache__/
+*.pyc
+
+# Ignora a pasta de configurações do VS Code.
+.vscode/
+
+# Ignora arquivos de sistema do macOS.
+.DS_Store
+
+# Ignora arquivos de cache de miniaturas do Windows.
+Thumbs.db
