@@ -1,12 +1,7 @@
 .env
-
 # --- Dependências (Python) ---
 # Ignora a pasta do ambiente virtual do Python ('venv').
 venv/
-
-# --- Dependências (Node.js) ---
-# Ignora os módulos do Node ('node_modules').
-node_modules/
 
 # Ignora as pastas de cache do Python.
 __pycache__/
