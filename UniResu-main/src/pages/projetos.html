@@ -32,18 +32,18 @@
             </p>
             <button class="btn-enter">Login</button>
 
-            <form class="search-form">
+            <form class="search-form" id="form-busca">
                 <div class="inputs-row">
-                    <input type="text" placeholder="Buscar">
-                    <input type="text" placeholder="Local">
+                    <input type="text" placeholder="Buscar" id="input-buscar">
+                    <input type="text" placeholder="Local" id="input-local">
                 </div>
 
                 <label class="checkbox-remote">
-                    <input type="checkbox"> Apenas trabalhos remotos
+                    <input type="checkbox" id="check-remoto"> Apenas trabalhos remotos
                 </label>
 
-                <select>
-                    <option selected>Área de Estudo</option>
+                <select id="select-area">
+                    <option value="">Área de Estudo</option>
                     <option>Ciências Exatas e da Terra</option>
                     <option>Ciências Biológicas e da Saúde</option>
                     <option>Ciências Humanas</option>
@@ -58,42 +58,19 @@
                 <button type="submit" class="btn-search">Procurar Projetos</button>
 
                 <div class="filters">
-                    <label><input type="checkbox" checked> Projeto Institucional (Aberto)</label>
-                    <label><input type="checkbox" checked> Projeto Institucional (Exclusivo)</label>
-                    <label><input type="checkbox" checked> Projeto Voluntário (Aberto)</label>
-                    <label><input type="checkbox" checked> Projeto Voluntário (Exclusivo)</label>
+                    <label><input type="checkbox" name="tipo_projeto" value="institucional_aberto" checked> Projeto
+                        Institucional (Aberto)</label>
+                    <label><input type="checkbox" name="tipo_projeto" value="institucional_exclusivo" checked> Projeto
+                        Institucional (Exclusivo)</label>
+                    <label><input type="checkbox" name="tipo_projeto" value="voluntario_aberto" checked> Projeto
+                        Voluntário (Aberto)</label>
+                    <label><input type="checkbox" name="tipo_projeto" value="voluntario_exclusivo" checked> Projeto
+                        Voluntário (Exclusivo)</label>
                     <a href="#" class="rss">RSS</a>
                 </div>
             </form>
 
-            <div class="project-list">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Diagnóstico e Tratamento de sepse por bacilos Gram-negativos em Centros de Tratamento
-                            Intensivo do Rio de Janeiro</h3>
-                        <p>Diagnóstico e Tratamento de sepse por bacilos Gram-negativos em Centros de Tratamento
-                            Intensivo do Rio de Janeiro</p>
-                    </div>
-                    <div class="project-meta">
-                        <span class="institution">UERJ</span>
-                        <span class="type">Projeto Institucional (Exclusivo)</span>
-                        <span class="date">Publicado 3 semanas atrás</span>
-                    </div>
-                </div>
-
-                <div class="project-card faded">
-                    <div class="project-info">
-                        <h3>Aplicação do programa R para estudos epidemiológicos: capacitação para alunos de graduação e
-                            pós-graduação em saúde</h3>
-                        <p>Aplicação do programa R para estudos epidemiológicos: capacitação para alunos de graduação e
-                            pós-graduação em saúde</p>
-                    </div>
-                    <div class="project-meta">
-                        <span class="institution">Belém, Pará</span>
-                        <span class="type">Projeto Institucional (Exclusivo)</span>
-                        <span class="date">Publicado 2 meses atrás</span>
-                    </div>
-                </div>
+            <div class="project-list" id="lista-projetos">
             </div>
         </section>
     </main>
