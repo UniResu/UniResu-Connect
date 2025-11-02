@@ -22,7 +22,7 @@ def conectar_mongo():
             return
 
         client = MongoClient(MONGO_URI)
-        client.admin.command('ping')
+        #client.admin.command('ping')
         
         db = client["UniResuDB"] 
         print(f"✅ Conectado ao MongoDB Atlas (Banco: {db.name})")
