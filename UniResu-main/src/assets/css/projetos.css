@@ -1,22 +1,22 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #4c0568;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #4c0568;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo img {
-    height: 70px;
+  height: 70px;
 }
 
-.nav a.active, 
+.nav a.active,
 .nav-links a.active {
   font-weight: 600;
   color: #ffffff;
@@ -24,23 +24,23 @@
 
 
 .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #cb89e0;
+  color: #cb89e0;
 }
 
 * {
@@ -54,6 +54,9 @@ body {
   background: #fff;
   color: #222;
   padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
@@ -75,6 +78,7 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: 40px auto;
+  flex-grow: 1;
 }
 
 .projects-section h1 {
