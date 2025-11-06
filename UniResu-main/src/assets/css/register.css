@@ -83,37 +83,37 @@
     cursor: pointer;
 }
 
+
 .register-page {
     min-height: 100vh;
     background: linear-gradient(180deg, #3c0453, #b37ed7);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    padding-top: 110px;
     box-sizing: border-box;
+    padding: 115px 20px 25px 20px;
 }
 
 .register-container {
     background-color: #fff;
-    border-radius: 40px;
-    padding: 40px 60px;
     width: 100%;
     max-width: 600px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 22px 35px;
+    border-radius: 30px; 
 }
 
 .register-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 18px; 
 }
 
 .register-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.35rem; 
     border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
+    padding-bottom: 4px; 
     color: #3c0453;
 }
 
@@ -135,7 +135,7 @@
 .register-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 9px;
 }
 
 .register-form label {
@@ -144,18 +144,18 @@
 
 .register-form input,
 .register-form select {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 7px 10px; 
+    border-radius: 7px;
     border: 1px solid #ccc;
     width: 100%;
 }
 
 .checkbox-group {
-    font-size: 0.9rem;
+    font-size: 0.81rem;
     display: flex;
     flex-direction: column;
-    gap: 15px;
     margin-top: 5px;
+    gap: 7px;
 }
 
 .checkbox-group label {
@@ -174,13 +174,13 @@
     background-color: #8a2be2;
     color: white;
     border: none;
-    padding: 12px 0;
+    padding: 11px 0;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 10px;
     transition: 0.3s;
+    margin-top: 7px;
 }
 
 .btn-primary:hover {
