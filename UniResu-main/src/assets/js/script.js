@@ -6,19 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // ... (todo o código do IntersectionObserver para os números) ...
-    // [const observer = new IntersectionObserver(...)]
-    // [statNumbers.forEach(...)]
-
-    // ... (todo o código do IntersectionObserver para os projetos) ...
-    // [const projetoCards = document.querySelectorAll(...)]
-    // [projetoCards.forEach(...)]
-    // [const projetosObserver = new IntersectionObserver(...)]
-    // [projetoCards.forEach(...)]
-
-    // ... (todo o seu código de scroll suave) ...
-    // [document.querySelectorAll('a[href^="#"]').forEach(...)]
-
     async function buscarUsuariosDoBackend() {
 
         const urlDoBackend = 'http://127.0.0.1:8000/api/usuarios';
