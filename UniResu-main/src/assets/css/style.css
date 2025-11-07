@@ -52,7 +52,7 @@
     background-color: white;
     color: #7504aa;
     font-weight: bold;
-    
+
 }
 
 .btn-primary:hover {
@@ -88,9 +88,21 @@
 }
 
 .content-section {
-    padding: 60px 5%;
-    text-align: center;
     background-color: rgb(198, 192, 199);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
+}
+
+section[id] {
+    scroll-margin-top: 4rem;
 }
 
 .content-section h2 {
@@ -232,13 +244,32 @@ footer {
 .btn-explorar {
     background-color: #a242b5;
     color: white;
-    padding: 12px 32px;
-    border-radius: 6px;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 2rem;
     font-weight: 600;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
 .btn-explorar:hover {
+    background-color: #dd43e6;
+}
+
+.btn-forum {
+    background-color: #a242b5;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 8rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-forum:hover {
     background-color: #dd43e6;
 }
 
