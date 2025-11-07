@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database.connection import conectar_mongo, fechar_mongo
 from routes.usuario_routes import router as router_usuario
-from routes.projeto_routes import router as router_projeto # <-- LINHA ADICIONADA
+from routes.projeto_routes import router as router_projeto
+from routes.forum_routes import router as router_forum
 
 app = FastAPI(title="UniResu API")
 app.add_middleware(
@@ -38,4 +39,10 @@ app.include_router(
     router_projeto, 
     prefix="/api", 
     tags=["Projetos"] 
+)
+
+app.include_router(
+    router_forum, 
+    prefix="/api",
+    tags=["Fórum"] 
 )

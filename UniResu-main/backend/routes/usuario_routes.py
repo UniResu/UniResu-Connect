@@ -82,7 +82,7 @@ def registrar_usuario_route(user: UsuarioCreate):
         usuario_criado = db.usuarios.find_one({"_id": inserted.inserted_id})
         
         if usuario_criado is None:
-             raise HTTPException(
+            raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, 
                 detail="Erro ao criar o usuário."
             )

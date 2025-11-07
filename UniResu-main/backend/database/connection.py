@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path="../.env")
 
 MONGO_URI = os.getenv("MONGO_URI")
 
@@ -10,20 +10,14 @@ client: MongoClient = None
 db = None
 
 def conectar_mongo():
-    """
-    Esta função é chamada pelo 'startup' do FastAPI.
-    Ela inicializa as variáveis globais 'client' e 'db'.
-    """
     global client, db
-
     try:
         if not MONGO_URI:
             print("❌ ERRO: Variável MONGO_URI não encontrada.")
+            print("   Verifique se seu arquivo .env está em UniResu-main/ e não em backend/")
             return
 
         client = MongoClient(MONGO_URI)
-        #client.admin.command('ping')
-        
         db = client["UniResuDB"] 
         print(f"✅ Conectado ao MongoDB Atlas (Banco: {db.name})")
 

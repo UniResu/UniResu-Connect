@@ -1,0 +1,36 @@
+from pydantic import BaseModel, Field
+from typing import List, Optional
+from datetime import datetime
+
+class RespostaCreate(BaseModel):
+    """Modelo para o que o usuário envia ao responder."""
+    conteudo: str
+
+class RespostaInDB(BaseModel):
+    """Modelo de como a resposta é salva no banco."""
+    id: str = Field(alias="_id")
+    conteudo: str
+    autor_email: str
+    data_postagem: datetime = Field(default_factory=datetime.now)
+    
+    class Config:
+        populate_by_name = True
+        from_attributes = True
+
+class TopicoCreate(BaseModel):
+    """Modelo para o que o usuário envia ao criar um tópico."""
+    titulo: str
+    conteudo: str 
+
+class TopicoResponse(BaseModel):
+    """Modelo para o que a API retorna ao listar tópicos."""
+    id: str = Field(alias="_id")
+    titulo: str
+    autor_email: str
+    data_criacao: datetime
+    visualizacoes: int = 0
+    respostas: List[RespostaInDB] = [] 
+    
+    class Config:
+        populate_by_name = True
+        from_attributes = True
