@@ -68,8 +68,12 @@ def criar_topico(
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro: {e}")
+<<<<<<< HEAD
     #olhar daqui para cima
 
+=======
+#olhar daqui para cima
+>>>>>>> eee4df04102e78f674eee3c284e5a8aaba71d362
 @router.post(
     "/forum/topicos/{topico_id}/responder",
     response_model=TopicoResponse

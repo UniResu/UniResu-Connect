@@ -167,7 +167,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-012| O sistema deve exibir uma seção "Quem Somos" com informações sobre a iniciativa UniResu | Baixa |
 |RF-013| O sistema deve disponibilizar uma área com materiais e informações sobre escrita científica | ALTA |
 |RF-014| O sistema deve possuir uma página inicial (Homepage) que destaque as principais funcionalidades e oportunidades | ALTA |
-|RF-015|  | ALTA |
+|RF-015| O sistema deve possiblitar o usuário abrir os projetos e candidatar-se à vagas | ALTA |
 |RF-016|  | MÉDIA |
 |RF-017| | MÉDIA |
 |RF-018|  | MÉDIA |
