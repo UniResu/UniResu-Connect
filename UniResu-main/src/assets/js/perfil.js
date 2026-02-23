@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Informações atualizadas com sucesso!');
         });
     } else {
-         console.error("Erro: Formulário do modal (id='editProfileForm') não encontrado.");
+        console.error("Erro: Formulário do modal (id='editProfileForm') não encontrado.");
     }
 
     const uploadArea = document.getElementById('uploadArea');

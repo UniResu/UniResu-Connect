@@ -21,17 +21,18 @@
             <li><a href="./projetos.html#projetos">Projetos Acadêmicos</a></li>
             <li><a href="./forum.html#forum">Fórum</a></li>
         </ul>
-        <a href="./register.html" class="btn-register">Registre-se</a>
+        <div id="area-usuario">
+            <a href="./login.html" class="btn-register" id="btn-login">Login</a>
+        </div>
     </header>
 
     <main class="main-content">
         <section class="projects-section">
             <h1>Projetos</h1>
-            <p class="login-hint">
+            <p class="login-hint" id="msg-login">
                 Você deve estar conectado para gerenciar seus projetos.
             </p>
-            <button class="btn-enter">Login</button>
-
+            <button class="btn-enter" id="btn-entrar-login" onclick="window.location.href='./login.html'">Login</button>
             <form class="search-form" id="form-busca">
                 <div class="inputs-row">
                     <input type="text" placeholder="Buscar" id="input-buscar">
@@ -79,7 +80,25 @@
         <p>Grupo Acadêmico UniResu | Copyright © 2025 UniResu -
             Conectando a Comunidade Acadêmica | Realizado por UniResu - Conectando a Comunidade Acadêmica.</p>
     </footer>
+    <script>
+        const token = localStorage.getItem('token');
+        const nome = localStorage.getItem('usuario_nome');
 
+        if (token && nome) {
+            document.getElementById('area-usuario').innerHTML = `
+            <span style="font-weight:600;">Olá, ${nome}</span>
+            <button onclick="logout()" style="margin-left:12px; cursor:pointer;">Sair</button>
+        `;
+            document.getElementById('msg-login').style.display = 'none';
+            document.getElementById('btn-entrar-login').style.display = 'none';
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('usuario_nome');
+            window.location.reload();
+        }
+    </script>
     <script src="../assets/js/projetos.js"></script>
 </body>
 

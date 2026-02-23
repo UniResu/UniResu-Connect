@@ -1,0 +1,29 @@
+document.querySelector('.login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/usuarios/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, senha })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert(data.detail || 'Erro ao fazer login.');
+            return;
+        }
+
+        localStorage.setItem('token', data.access_token);
+        localStorage.setItem('usuario_nome', data.nome);
+
+        window.location.href = './projetos.html';
+
+    } catch (err) {
+        alert('Erro de conexão! Verifique se o servidor está rodando.');
+    }
+});

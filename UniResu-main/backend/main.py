@@ -6,9 +6,10 @@ from routes.projeto_routes import router as router_projeto
 from routes.forum_routes import router as router_forum
 
 app = FastAPI(title="UniResu API")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://127.0.0.1:5500", "http://localhost:5500"], 
     allow_credentials=True,
     allow_methods=["*"], 
     allow_headers=["*"], 
@@ -16,33 +17,16 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-    """Conecta ao banco de dados quando a API inicia."""
     conectar_mongo() 
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    """Fecha a conexão com o banco quando a API desliga."""
     fechar_mongo() 
 
 @app.get("/")
 def home():
-    """Rota 'raiz' apenas para verificar se a API está online."""
     return {"status": "Servidor FastAPI rodando!"}
 
-app.include_router(
-    router_usuario, 
-    prefix="/api",
-    tags=["Usuários"] 
-)
-
-app.include_router(
-    router_projeto, 
-    prefix="/api", 
-    tags=["Projetos"] 
-)
-
-app.include_router(
-    router_forum, 
-    prefix="/api",
-    tags=["Fórum"] 
-)
+app.include_router(router_usuario, prefix="/api", tags=["Usuários"])
+app.include_router(router_projeto, prefix="/api", tags=["Projetos"])
+app.include_router(router_forum, prefix="/api", tags=["Fórum"])

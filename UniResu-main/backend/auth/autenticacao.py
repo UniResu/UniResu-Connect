@@ -3,17 +3,28 @@ from datetime import datetime, timedelta, timezone
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
+from passlib.context import CryptContext
 from dotenv import load_dotenv
 from database.connection import get_db
 
 load_dotenv(dotenv_path="../.env")
-SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = os.getenv("ALGORITHM")
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
 
+SECRET_KEY = os.getenv("SECRET_KEY", "chave_secreta_fallback_super_segura")
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/usuarios/login")
 
+def hash_password(password: str):
+    """Criptografa a senha antes de salvar no banco."""
+    return pwd_context.hash(password)
+
+def verify_password(plain_password: str, hashed_password: str):
+    """Compara a senha digitada com a senha do banco."""
+    return pwd_context.verify(plain_password, hashed_password)
+
 def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    """Gera o token de login JWT."""
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.now(timezone.utc) + expires_delta
@@ -21,26 +32,19 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
         expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
 
     to_encode.update({"exp": expire})
-
-    if not SECRET_KEY:
-        raise HTTPException(status_code=500, detail="SECRET_KEY não configurada")
-
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
 def get_usuario_atual(token: str = Depends(oauth2_scheme)):
     """
     Decodifica o token JWT e retorna os dados do usuário.
-    Esta é a função que vai "proteger" nossas rotas.
+    Esta função protege rotas que exigem login (como as do fórum).
     """
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Não foi possível validar as credenciais",
         headers={"WWW-Authenticate": "Bearer"},
     )
-
-    if not SECRET_KEY:
-        raise HTTPException(status_code=500, detail="SECRET_KEY não configurada")
 
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
@@ -60,7 +64,8 @@ def get_usuario_atual(token: str = Depends(oauth2_scheme)):
         raise credentials_exception
 
     usuario["id"] = str(usuario["_id"])
-    del usuario["senha_hash"]
+    if "senha_hash" in usuario:
+        del usuario["senha_hash"]
     del usuario["_id"]
 
     return usuario

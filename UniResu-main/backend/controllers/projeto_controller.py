@@ -46,16 +46,14 @@ def buscar_projetos_controller(
     if remoto:
         query_filter["e_remoto"] = True
     if tipos:
-        lista_de_tipos = tipos.split(',')
-        if lista_de_tipos:
+        if lista_de_tipos := tipos.split(','):
             query_filter["tipo_projeto"] = {"$in": lista_de_tipos}
 
     try:
         cursor = db.projetos.find(query_filter)
         resultados = list(cursor.limit(50))
         
-        resultados_formatados = [formatar_projeto(doc) for doc in resultados]
-        return resultados_formatados
+        return [formatar_projeto(doc) for doc in resultados]
 
     except Exception as e:
         print(f"❌ Erro na consulta ao MongoDB: {e}")
