@@ -1,23 +1,26 @@
 from typing import List, Optional, Dict, Any
-from database.connection import get_db 
+from database.connection import get_db
+
+TIPO_LABELS = {
+    "institucional_aberto": "Projeto Institucional (Aberto)",
+    "institucional_exclusivo": "Projeto Institucional (Exclusivo)",
+    "voluntario_aberto": "Projeto Voluntário (Aberto)",
+    "voluntario_exclusivo": "Projeto Voluntário (Exclusivo)",
+}
 
 def formatar_projeto(doc: Dict[str, Any]) -> Dict[str, Any]:
-    """Converte _id para id e ajusta nomes de campos para o JS."""
     if "_id" in doc:
         doc["id"] = str(doc["_id"])
         del doc["_id"]
 
     if "tipo_projeto" in doc:
-        if doc["tipo_projeto"] == "institucional_exclusivo":
-            doc["tipo"] = "Projeto Institucional (Exclusivo)"
-        elif doc["tipo_projeto"] == "voluntario_aberto":
-            doc["tipo"] = "Projeto Voluntário (Aberto)"
-        else:
-            doc["tipo"] = doc["tipo_projeto"]
-            
+        doc["tipo"] = TIPO_LABELS.get(doc["tipo_projeto"], doc["tipo_projeto"])
+
     if "data_publicacao" in doc:
-        doc["dataPublicacao"] = "Publicado recentemente" 
+        doc["dataPublicacao"] = "Publicado recentemente"
+
     return doc
+
 def buscar_projetos_controller(
     q: Optional[str],
     local: Optional[str],
@@ -27,9 +30,7 @@ def buscar_projetos_controller(
 ) -> List[Dict[str, Any]]:
 
     db = get_db()
-
     if db is None:
-        print("❌ ERRO no Controller: Não foi possível obter o 'db'.")
         return []
 
     query_filter = {}
@@ -51,10 +52,7 @@ def buscar_projetos_controller(
 
     try:
         cursor = db.projetos.find(query_filter)
-        resultados = list(cursor.limit(50))
-        
-        return [formatar_projeto(doc) for doc in resultados]
-
+        return [formatar_projeto(doc) for doc in cursor.limit(50)]
     except Exception as e:
         print(f"❌ Erro na consulta ao MongoDB: {e}")
         return []
