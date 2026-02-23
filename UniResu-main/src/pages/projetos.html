@@ -118,9 +118,12 @@
     <script>
         const token = localStorage.getItem('token');
         const nome = localStorage.getItem('usuario_nome');
+        const vinculo = localStorage.getItem('usuario_vinculo');
 
         if (token && nome) {
+            const isProfessor = vinculo === 'professor' || vinculo === 'pesquisador';
             document.getElementById('area-usuario').innerHTML = `
+            ${isProfessor ? '<a href="./gerenciar-projetos.html" style="margin-right:12px; color:#6a0dad; font-weight:600;">Gerenciar Projetos</a>' : ''}
             <span style="font-weight:600;">Olá, ${nome}</span>
             <button onclick="logout()" style="margin-left:12px; cursor:pointer;">Sair</button>
         `;
@@ -131,6 +134,7 @@
         function logout() {
             localStorage.removeItem('token');
             localStorage.removeItem('usuario_nome');
+            localStorage.removeItem('usuario_vinculo');
             window.location.reload();
         }
     </script>

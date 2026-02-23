@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Projetos - UniResu</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/projetos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../assets/img/uniresulogo.png" alt="Logo UniResu">
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html#home">Home</a></li>
+            <li><a href="../../index.html#quem-somos">Quem Somos</a></li>
+            <li><a href="./projetos.html">Projetos Acadêmicos</a></li>
+            <li><a href="./forum.html#forum">Fórum</a></li>
+        </ul>
+        <div id="area-usuario"></div>
+    </header>
+
+    <main class="main-content">
+        <section class="projects-section">
+            <h1>Gerenciar Projetos</h1>
+
+            <button id="btn-novo-projeto" class="btn-search" style="margin-bottom:24px;">+ Novo Projeto</button>
+
+            <div id="form-container"
+                style="display:none; background:#f5f5f5; padding:24px; border-radius:12px; margin-bottom:32px;">
+                <h2 id="form-titulo-label" style="margin-bottom:16px;">Novo Projeto</h2>
+                <form id="form-projeto">
+                    <label>Título</label>
+                    <input type="text" id="proj-titulo" required
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+
+                    <label>Descrição</label>
+                    <textarea id="proj-descricao" required rows="3"
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;"></textarea>
+
+                    <label>Instituição</label>
+                    <input type="text" id="proj-instituicao" required
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+
+                    <label>Local</label>
+                    <input type="text" id="proj-local"
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+
+                    <label>Área de Estudo</label>
+                    <select id="proj-area" required
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+                        <option value="">Selecione</option>
+                        <option>Ciências Exatas e da Terra</option>
+                        <option>Ciências Biológicas e da Saúde</option>
+                        <option>Ciências Humanas</option>
+                        <option>Ciências Sociais Aplicadas</option>
+                        <option>Área de Tecnologias</option>
+                        <option>Engenharias</option>
+                        <option>Ciências Agrárias</option>
+                        <option>Artes e Design</option>
+                        <option>Linguística e Letras</option>
+                    </select>
+
+                    <label>Tipo de Projeto</label>
+                    <select id="proj-tipo" required
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+                        <option value="institucional_aberto">Projeto Institucional (Aberto)</option>
+                        <option value="institucional_exclusivo">Projeto Institucional (Exclusivo)</option>
+                        <option value="voluntario_aberto">Projeto Voluntário (Aberto)</option>
+                        <option value="voluntario_exclusivo">Projeto Voluntário (Exclusivo)</option>
+                    </select>
+
+                    <label>Nome do Professor/Pesquisador</label>
+                    <input type="text" id="proj-nome-professor" required
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+
+                    <label>E-mail do Professor/Pesquisador</label>
+                    <input type="email" id="proj-email-professor" required
+                        style="width:100%; padding:10px; margin-bottom:12px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box;">
+
+                    <label style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+                        <input type="checkbox" id="proj-remoto"> Projeto Remoto
+                    </label>
+
+                    <div style="display:flex; gap:12px;">
+                        <button type="submit" class="btn-search" style="flex:1;">Salvar</button>
+                        <button type="button" id="btn-cancelar"
+                            style="flex:1; padding:12px; border:1px solid #ddd; border-radius:6px; cursor:pointer;">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="lista-meus-projetos"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Grupo Acadêmico UniResu | Copyright © 2025 UniResu - Conectando a Comunidade Acadêmica.</p>
+    </footer>
+
+    <script src="../assets/js/gerenciar-projetos.js"></script>
+</body>
+
+</html>

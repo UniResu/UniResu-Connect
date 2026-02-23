@@ -1,6 +1,17 @@
 from pydantic import BaseModel
 from typing import Optional
 
+class ProjetoCreate(BaseModel):
+    titulo: str
+    descricao: str
+    instituicao: str
+    local: Optional[str]
+    area_estudo: str
+    tipo_projeto: str
+    e_remoto: bool = False
+    nome_professor: str
+    email_professor: str
+
 class ProjetoResponse(BaseModel):
     id: str
     titulo: str

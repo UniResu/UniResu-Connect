@@ -20,6 +20,7 @@ document.querySelector('.login-form').addEventListener('submit', async (e) => {
 
         localStorage.setItem('token', data.access_token);
         localStorage.setItem('usuario_nome', data.nome);
+        localStorage.setItem('usuario_vinculo', data.vinculo);
 
         window.location.href = './projetos.html';
 

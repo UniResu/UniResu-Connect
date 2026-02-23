@@ -53,7 +53,8 @@ def login_usuario(user: UsuarioLogin):
     token = create_access_token(data={"sub": usuario_db["email"]})
     
     return {
-        "access_token": token,
-        "token_type": "bearer",
-        "nome": usuario_db["nome"]
-    }
+    "access_token": token,
+    "token_type": "bearer",
+    "nome": usuario_db["nome"],
+    "vinculo": usuario_db["vinculo"]
+}
