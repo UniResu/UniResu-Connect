@@ -219,7 +219,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-019|   |
 |RST-020|   |
 
-
 # Alterações futuras
 
 Poderão ocorrer alterações futuras nas funcionalidades e restrições do projeto.
