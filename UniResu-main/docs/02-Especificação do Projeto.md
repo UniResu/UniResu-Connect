@@ -153,23 +153,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-------------------------|----|
-|RF-001| O sistema deve permitir que novos usuários (alunos, professores, pesquisadores) se cadastrem na plataforma | ALTA |
+|RF-001| O sistema deve permitir que um novo usuário (alunos, professores, pesquisadores) se cadastre na plataforma | ALTA |
 |RF-002| A aplicação deve permitir a **autenticação** do usuário (login/logout) | ALTA |
-|RF-003| Deve haver um sistema para recuperação de senha | ALTA |
-|RF-004| O sistema deve permitir que os usuários tenham um perfil, possivelmente com informações acadêmicas | ALTA |
-|RF-005| Professores e pesquisadores devem poder cadastrar e publicar projetos de pesquisa, grupos de estudo e outras oportunidades acadêmicas | ALTA |
-|RF-006| Os usuários devem poder visualizar uma lista de projetos disponíveis | ALTA |
+|RF-003| Deve haver um sistema para recuperação de senha | ALTA N-X|
+|RF-004| O sistema deve permitir que o usuário tenha um perfil, possivelmente com informações acadêmicas | ALTA N-X|
+|RF-005| Professores e pesquisadores devem poder cadastrar e publicar oportunidades de vagas em projetos acadêmicos | ALTA |
+|RF-006| O usuário pode visualizar uma lista de projetos disponíveis | ALTA |
 |RF-007| O sistema deve permitir a busca e a filtragem de projetos (por área de interesse, por universidade, etc.) | ALTA |
-|RF-008| Os usuários devem poder se inscrever ou demonstrar interesse nos projetos | ALTA |
-|RF-009| O sistema deve possuir um fórum onde os usuários podem criar tópicos de discussão | ALTA |
-|RF-010| Os usuários devem poder responder a tópicos existentes | ALTA |
-|RF-011| Deve ser possível pesquisar por tópicos ou palavras-chave no fórum | ALTA |
-|RF-012| O sistema deve exibir uma seção "Quem Somos" com informações sobre a iniciativa UniResu | Baixa |
-|RF-013| O sistema deve disponibilizar uma área com materiais e informações sobre escrita científica | ALTA |
+|RF-008| O usuário pode se candidatar aos projetos | ALTA |
+|RF-009| O sistema deve possuir um fórum com tópicos de discussão | ALTA N-X|
+|RF-010| O usuário pode responder a tópicos existentes | ALTA N-X|
+|RF-011| Deve ser possível pesquisar por tópicos ou palavras-chave no fórum | ALTA N-X|
+|RF-012| O sistema deve exibir uma seção "Quem Somos" com informações sobre a iniciativa UniResu | Baixa N-RX|
+|RF-013| O sistema deve disponibilizar uma área com materiais e informações sobre escrita científica | ALTA N-X|
 |RF-014| O sistema deve possuir uma página inicial (Homepage) que destaque as principais funcionalidades e oportunidades | ALTA |
 |RF-015| O sistema deve possiblitar o usuário abrir os projetos e candidatar-se à vagas | ALTA |
 |RF-016|  | MÉDIA |
-|RF-017| | MÉDIA |
+|RF-017|  | MÉDIA |
 |RF-018|  | MÉDIA |
 |RF-019|  | MÉDIA |
 |RF-020|  | MÉDIA |
@@ -178,17 +178,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  | Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A interface do site deve ser intuitiva e de fácil navegação para que os usuários encontrem rapidamente as informações que procuram | ALTA |
+|RNF-001| A interface do site deve ser intuitiva e de fácil navegação para que o usuário encontre rapidamente as informações que procura | ALTA |
 |RNF-002| **Desempenho**: páginas de listagem (ofertas) devem responder em até **2 s** em condições normais (até 100 usuários simultâneos). | ALTA |
 |RNF-003| O design deve ser responsivo, adaptando-se a diferentes tamanhos de tela, como desktops, tablets e smartphones | ALTA |
-|RNF-004| O site deve utilizar o protocolo HTTPS para garantir a comunicação segura e a proteção dos dados dos usuários | ALTA |
-|RNF-005| As senhas dos usuários devem ser armazenadas de forma criptografada no banco de dados | MÉDIA |
+|RNF-004| O site deve utilizar o protocolo HTTPS para garantir a comunicação segura e a proteção dos dados do usuário | ALTA |
+|RNF-005| A senha do usuário deve ser armazenada de forma criptografada no banco de dados | MÉDIA |
 |RNF-006| O sistema deve ser protegido contra ataques comuns, como injeção de SQL e Cross-Site Scripting (XSS) | MÉDIA |
-|RNF-007| **Proteção contra abuso**: limitar **tamanho do comentário** (ex.: 200 caracteres) e aplicar **rate-limit** para avaliações/edições. | BAIXA | 
-|RNF-008| O sistema deve suportar um número crescente de usuários e postagens simultâneas sem degradação significativa da performance | BAIXA| 
+|RNF-007| **Proteção contra abuso**: limitar **tamanho do comentário** (ex.: 200 caracteres) e aplicar **rate-limit** para avaliações/edições. | BAIXA | **N-REVISAR**
+|RNF-008| O sistema deve suportar um número crescente de usuários e postagens simultâneas sem degradação significativa da performance | BAIXA| **N-REVISAR**
 |RNF-009| O site deve ser compatível e funcionar corretamente nas versões mais recentes dos principais navegadores (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge) | MÉDIA | 
 |RNF-010|A plataforma deve estar disponível para acesso 24 horas por dia, 7 dias por semana, com um tempo de inatividade mínimo | MÉDIA | 
-|RNF-011| O site deve seguir as diretrizes de acessibilidade (WCAG) para ser utilizável por pessoas com deficiência, permitindo, por exemplo, a navegação via teclado e o uso de leitores de tela | MÉDIA | 
+|RNF-011| O site deve seguir as diretrizes de acessibilidade (WCAG) para ser utilizável por pessoas com deficiência, permitindo, por exemplo, a navegação via teclado e o uso de leitores de tela | MÉDIA N-X| 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -199,7 +199,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |RST-001| O sistema será desenvolvido inicialmente como aplicação web; aplicativos móveis nativos não estão contemplados nesta fase |
-|RST-002| O acesso à plataforma será limitado a usuários com vínculo acadêmico verificado (login institucional)    |
+|RST-002| Nessa fase, o acesso à plataforma será limitado a usuários com vínculo acadêmico verificado (login institucional)    |
 |RST-003| O sistema não contemplará integração com plataformas externas de pagamento ou bolsas nesta versão    |
 |RST-004| O processo de candidatura será interno à plataforma (sem envio de e-mails diretos)    |
 |RST-005| O sistema não proverá gestão de documentos acadêmicos (como submissão de artigos ou relatórios finais)    |
@@ -217,8 +217,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-017| O sistema não fará validação automática da veracidade de projetos cadastrados  |
 |RST-018|   |
 |RST-019|   |
-|RST-020|  |
+|RST-020|   |
 
+
+# Alterações futuras
+
+Poderão ocorrer alterações futuras nas funcionalidades e restrições do projeto.
 
 # Diagrama de Casos de Uso
 
