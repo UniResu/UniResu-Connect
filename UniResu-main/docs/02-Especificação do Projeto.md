@@ -164,7 +164,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| O sistema deve possuir um fórum com tópicos de discussão | ALTA N-X|
 |RF-010| O usuário pode responder a tópicos existentes | ALTA N-X|
 |RF-011| Deve ser possível pesquisar por tópicos ou palavras-chave no fórum | ALTA N-X|
-|RF-012| O sistema deve exibir uma seção "Quem Somos" com informações sobre a iniciativa UniResu | Baixa N-RX|
+|RF-012| O sistema deve exibir uma seção "Quem Somos" com informações sobre a iniciativa UniResu | Baixa N-X-R|
 |RF-013| O sistema deve disponibilizar uma área com materiais e informações sobre escrita científica | ALTA N-X|
 |RF-014| O sistema deve possuir uma página inicial (Homepage) que destaque as principais funcionalidades e oportunidades | ALTA |
 |RF-015| O sistema deve possiblitar o usuário abrir os projetos e candidatar-se à vagas | ALTA |
@@ -184,8 +184,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-004| O site deve utilizar o protocolo HTTPS para garantir a comunicação segura e a proteção dos dados do usuário | ALTA |
 |RNF-005| A senha do usuário deve ser armazenada de forma criptografada no banco de dados | MÉDIA |
 |RNF-006| O sistema deve ser protegido contra ataques comuns, como injeção de SQL e Cross-Site Scripting (XSS) | MÉDIA |
-|RNF-007| **Proteção contra abuso**: limitar **tamanho do comentário** (ex.: 200 caracteres) e aplicar **rate-limit** para avaliações/edições. | BAIXA | **N-REVISAR**
-|RNF-008| O sistema deve suportar um número crescente de usuários e postagens simultâneas sem degradação significativa da performance | BAIXA| **N-REVISAR**
+|RNF-007| **Proteção contra abuso**: limitar **tamanho do comentário** (ex.: 200 caracteres) e aplicar **rate-limit** para avaliações/edições. | BAIXA | **N-X-REVISAR**
+|RNF-008| O sistema deve suportar um número crescente de usuários e postagens simultâneas sem degradação significativa da performance | BAIXA| **N-X-REVISAR**
 |RNF-009| O site deve ser compatível e funcionar corretamente nas versões mais recentes dos principais navegadores (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge) | MÉDIA | 
 |RNF-010|A plataforma deve estar disponível para acesso 24 horas por dia, 7 dias por semana, com um tempo de inatividade mínimo | MÉDIA | 
 |RNF-011| O site deve seguir as diretrizes de acessibilidade (WCAG) para ser utilizável por pessoas com deficiência, permitindo, por exemplo, a navegação via teclado e o uso de leitores de tela | MÉDIA N-X| 
