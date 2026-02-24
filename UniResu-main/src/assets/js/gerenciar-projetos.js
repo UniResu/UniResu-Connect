@@ -46,7 +46,7 @@ document.getElementById('form-projeto').addEventListener('submit', async (e) => 
         tipo_projeto: document.getElementById('proj-tipo').value,
         nome_professor: document.getElementById('proj-nome-professor').value,
         email_professor: document.getElementById('proj-email-professor').value,
-        e_remoto: document.getElementById('proj-remoto').checked
+        modalidade: document.getElementById('proj-modalidade').value
     };
 
     const url = projetoEditandoId
@@ -140,7 +140,7 @@ function editarProjeto(id) {
             document.getElementById('proj-tipo').value = projeto.tipo_projeto || '';
             document.getElementById('proj-nome-professor').value = projeto.nome_professor || '';
             document.getElementById('proj-email-professor').value = projeto.email_professor || '';
-            document.getElementById('proj-remoto').checked = projeto.e_remoto || false;
+            document.getElementById('proj-modalidade').value = projeto.modalidade || 'presencial';
             document.getElementById('form-container').style.display = 'block';
             window.scrollTo(0, 0);
         });

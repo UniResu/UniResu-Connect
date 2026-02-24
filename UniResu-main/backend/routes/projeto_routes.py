@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Query, UploadFile, File, Form, HTTPException, Depends
+from fastapi import APIRouter, Query, UploadFile, File, Form, HTTPException, Depends, status
 from typing import List, Optional
 from controllers.projeto_controller import buscar_projetos_controller
 from models.projeto_model import ProjetoResponse, ProjetoCreate
@@ -20,27 +20,35 @@ async def buscar_projetos_route(
     q: Optional[str] = None,
     local: Optional[str] = None,
     area: Optional[str] = None,
-    remoto: bool = False,
+    modalidade: Optional[str] = None, 
     tipos: Optional[str] = Query(None)
 ):
-    return buscar_projetos_controller(q, local, area, remoto, tipos)
+    
+    return buscar_projetos_controller(q, local, area, modalidade, tipos)
 
 
-@router.post("/projetos/criar", response_model=ProjetoResponse, status_code=201)
+@router.post("/projetos/criar", response_model=ProjetoResponse, status_code=status.HTTP_201_CREATED)
 def criar_projeto(projeto: ProjetoCreate, usuario_atual=Depends(get_usuario_atual)):
     if usuario_atual.get("vinculo") not in ["professor", "pesquisador"]:
-        raise HTTPException(status_code=403, detail="Apenas professores e pesquisadores podem criar projetos.")
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN, 
+            detail="Apenas professores e pesquisadores podem criar projetos."
+        )
 
     db = get_db()
-    novo = projeto.dict()
+    
+    novo = projeto.dict() 
     novo["data_publicacao"] = datetime.now(timezone.utc).isoformat()
     novo["criado_por"] = usuario_atual["email"]
 
     resultado = db.projetos.insert_one(novo)
+    
     criado = db.projetos.find_one({"_id": resultado.inserted_id})
+    
     criado["id"] = str(criado["_id"])
     criado["tipo"] = criado.get("tipo_projeto", "")
     criado["dataPublicacao"] = "Publicado recentemente"
+    
     del criado["_id"]
     return criado
 
@@ -48,13 +56,14 @@ def criar_projeto(projeto: ProjetoCreate, usuario_atual=Depends(get_usuario_atua
 @router.delete("/projetos/{projeto_id}")
 def excluir_projeto(projeto_id: str, usuario_atual=Depends(get_usuario_atual)):
     if usuario_atual.get("vinculo") not in ["professor", "pesquisador"]:
-        raise HTTPException(status_code=403, detail="Acesso negado.")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Acesso negado.")
 
     db = get_db()
     projeto = db.projetos.find_one({"_id": ObjectId(projeto_id)})
 
     if not projeto:
         raise HTTPException(status_code=404, detail="Projeto não encontrado.")
+    
     if projeto.get("criado_por") != usuario_atual["email"]:
         raise HTTPException(status_code=403, detail="Você só pode excluir seus próprios projetos.")
 
@@ -65,21 +74,24 @@ def excluir_projeto(projeto_id: str, usuario_atual=Depends(get_usuario_atual)):
 @router.put("/projetos/{projeto_id}", response_model=ProjetoResponse)
 def editar_projeto(projeto_id: str, projeto: ProjetoCreate, usuario_atual=Depends(get_usuario_atual)):
     if usuario_atual.get("vinculo") not in ["professor", "pesquisador"]:
-        raise HTTPException(status_code=403, detail="Acesso negado.")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Acesso negado.")
 
     db = get_db()
     existente = db.projetos.find_one({"_id": ObjectId(projeto_id)})
 
     if not existente:
         raise HTTPException(status_code=404, detail="Projeto não encontrado.")
+    
     if existente.get("criado_por") != usuario_atual["email"]:
         raise HTTPException(status_code=403, detail="Você só pode editar seus próprios projetos.")
 
     db.projetos.update_one({"_id": ObjectId(projeto_id)}, {"$set": projeto.dict()})
+    
     atualizado = db.projetos.find_one({"_id": ObjectId(projeto_id)})
     atualizado["id"] = str(atualizado["_id"])
     atualizado["tipo"] = atualizado.get("tipo_projeto", "")
     atualizado["dataPublicacao"] = "Publicado recentemente"
+    
     del atualizado["_id"]
     return atualizado
 

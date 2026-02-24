@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const buscar = document.getElementById('input-buscar').value;
         const local = document.getElementById('input-local').value;
         const area = document.getElementById('select-area').value;
-        const remoto = document.getElementById('check-remoto').checked;
+        
+        // AJUSTE AQUI: Verifica se o checkbox de remoto está marcado
+        const apenasRemoto = document.getElementById('check-remoto').checked;
+        
         const tipoCheckboxes = document.querySelectorAll('input[name="tipo_projeto"]:checked');
         const tipos = Array.from(tipoCheckboxes).map(cb => cb.value);
 
@@ -25,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (buscar) params.append('q', buscar);
         if (local) params.append('local', local);
         if (area) params.append('area', area);
-        if (remoto) params.append('remoto', 'true');
+        
+        // AJUSTE AQUI: Se estiver marcado, envia a string 'remoto' para bater com o novo controller
+        if (apenasRemoto) params.append('modalidade', 'remoto');
+        
         if (tipos.length > 0) params.append('tipos', tipos.join(','));
 
         fetchAndRenderProjects(`${API_BASE_URL}/api/projetos/buscar?${params.toString()}`);
@@ -84,8 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-descricao').textContent = project.descricao || '';
         document.getElementById('modal-instituicao').textContent = project.instituicao || '';
         document.getElementById('modal-professor').textContent = project.nome_professor || 'Não informado';
-        document.getElementById('modal-local').textContent = project.e_remoto ? 'Online' : (project.local || 'Presencial');
         document.getElementById('modal-tipo').textContent = project.tipo || '';
+
+        // MAPEAMENTO: Transforma o valor do banco em texto amigável
+        const modalidades = { presencial: 'Presencial', hibrido: 'Híbrido', remoto: 'Remoto' };
+        const modalidadeTexto = modalidades[project.modalidade] || project.modalidade || 'Não informado';
+
+        // INJEÇÃO: Preenche o campo que estava ficando vazio
+        document.getElementById('modal-modalidade').textContent = modalidadeTexto;
+        document.getElementById('modal-local').textContent = project.local || 'Rio de Janeiro'; 
 
         const form = document.getElementById('form-candidatura');
         form.onsubmit = (e) => enviarCandidatura(e, project);
@@ -132,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const data = await response.json();
-
             if (!response.ok) throw new Error(data.detail);
 
             alert('Candidatura enviada com sucesso!');

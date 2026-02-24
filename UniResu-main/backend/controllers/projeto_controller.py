@@ -9,6 +9,7 @@ TIPO_LABELS = {
 }
 
 def formatar_projeto(doc: Dict[str, Any]) -> Dict[str, Any]:
+    """Formata o documento do MongoDB para o padrão esperado pelo frontend."""
     if "_id" in doc:
         doc["id"] = str(doc["_id"])
         del doc["_id"]
@@ -18,14 +19,14 @@ def formatar_projeto(doc: Dict[str, Any]) -> Dict[str, Any]:
 
     if "data_publicacao" in doc:
         doc["dataPublicacao"] = "Publicado recentemente"
-
+    
     return doc
 
 def buscar_projetos_controller(
     q: Optional[str],
     local: Optional[str],
     area: Optional[str],
-    remoto: bool,
+    modalidade: Optional[str],
     tipos: Optional[str]
 ) -> List[Dict[str, Any]]:
 
@@ -40,12 +41,16 @@ def buscar_projetos_controller(
             {"titulo": {"$regex": q, "$options": "i"}},
             {"descricao": {"$regex": q, "$options": "i"}}
         ]
+
     if local:
         query_filter["local"] = {"$regex": local, "$options": "i"}
+    
     if area:
         query_filter["area_estudo"] = area
-    if remoto:
-        query_filter["e_remoto"] = True
+        
+    if modalidade:
+        query_filter["modalidade"] = modalidade
+
     if tipos:
         if lista_de_tipos := tipos.split(','):
             query_filter["tipo_projeto"] = {"$in": lista_de_tipos}
