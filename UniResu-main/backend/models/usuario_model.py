@@ -1,4 +1,5 @@
 from pydantic import BaseModel, EmailStr
+from pymongo.auth import Optional
 
 class UsuarioCreate(BaseModel):
     nome: str
@@ -6,6 +7,7 @@ class UsuarioCreate(BaseModel):
     senha: str
     instituicao: str
     vinculo: str
+    orcid_id: Optional[str] = None
 
 class UsuarioResponse(BaseModel):
     id: str

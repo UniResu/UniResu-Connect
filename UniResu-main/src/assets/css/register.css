@@ -222,3 +222,53 @@
         gap: 30px;
     }
 }
+
+.orcid-divider {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: 4px 0 6px;
+    color: #999;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+.orcid-divider::before,
+.orcid-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.orcid-status {
+    font-size: .8rem;
+    margin-bottom: 6px;
+}
+.orcid-hint { color: #888; }
+.orcid-ok   { color: #2d7a3a; font-weight: 600; }
+
+.btn-orcid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    padding: 9px 0;
+    background-color: #a6ce39;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: .85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .25s;
+    margin-bottom: 4px;
+}
+.btn-orcid:hover {
+    background-color: #548a54;
+}
+.btn-orcid img {
+    height: 18px;
+    filter: brightness(0) invert(1);
+}

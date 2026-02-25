@@ -5,7 +5,10 @@ from backend.routes.usuario_routes import router as router_usuario
 from backend.routes.projeto_routes import router as router_projeto
 from backend.routes.forum_routes import router as router_forum
 from backend.auth.auth_recuperacao import router as recuperacao_router
+from backend.routes.orcid_routes import router as router_orcid
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI(title="UniResu API")
 
 app.add_middleware(
@@ -32,3 +35,4 @@ app.include_router(router_usuario, prefix="/api", tags=["Usuários"])
 app.include_router(router_projeto, prefix="/api", tags=["Projetos"])
 app.include_router(router_forum, prefix="/api", tags=["Fórum"])
 app.include_router(recuperacao_router)
+app.include_router(router_orcid)
