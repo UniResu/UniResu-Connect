@@ -3,15 +3,11 @@ import smtplib
 from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel, EmailStr
-
-# Imports internos do seu projeto
 from backend.database.connection import get_db
 from backend.auth.autenticacao import hash_password
 
-# Configurações de e-mail
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 587
 SMTP_USER = "uniresuconnect@gmail.com"

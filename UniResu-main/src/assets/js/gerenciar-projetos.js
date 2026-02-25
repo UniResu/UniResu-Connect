@@ -159,3 +159,29 @@ function editarProjeto(id) {
             window.scrollTo(0, 0);
         });
 }
+
+async function excluirProjeto(id) {
+    const confirmar = confirm('Tem certeza que deseja excluir este projeto? Esta ação não pode ser desfeita.');
+    if (!confirmar) return;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/projetos/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            const data = await response.json();
+            throw new Error(data.detail || 'Erro ao excluir o projeto.');
+        }
+
+        alert('Projeto excluído com sucesso!');
+        carregarMeusProjetos(); 
+
+    } catch (err) {
+        console.error('Erro ao excluir:', err);
+        alert(`Erro: ${err.message}`);
+    }
+}

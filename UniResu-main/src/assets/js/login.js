@@ -1,7 +1,7 @@
 document.querySelector('.login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('email').value.trim().toLowerCase();
     const senha = document.getElementById('senha').value;
 
     try {
@@ -14,7 +14,12 @@ document.querySelector('.login-form').addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (!response.ok) {
-            alert(data.detail || 'Erro ao fazer login.');
+            if (response.status === 422) {
+                console.error('Erro de validação:', data.detail);
+                alert('Dados inválidos. Verifique o preenchimento.');
+            } else {
+                alert(data.detail || 'Erro ao fazer login.');
+            }
             return;
         }
 
@@ -25,6 +30,7 @@ document.querySelector('.login-form').addEventListener('submit', async (e) => {
         window.location.href = './projetos.html';
 
     } catch (err) {
+        console.error('Erro no fetch:', err);
         alert('Erro de conexão! Verifique se o servidor está rodando.');
     }
 });

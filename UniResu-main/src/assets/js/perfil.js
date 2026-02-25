@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         uploadArea.addEventListener('drop', handleDrop, false);
         function handleDrop(e) {
-            const files = e.dataTransfer.files;
+            const { dataTransfer: { files } } = e;
             if (files.length > 0) handleFile(files[0]);
         }
 

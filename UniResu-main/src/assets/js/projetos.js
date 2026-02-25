@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const vinculo = localStorage.getItem('usuario_vinculo');
     const nomeAluno = localStorage.getItem('usuario_nome');
 
-    // === DROPDOWN DO USUÁRIO ===
     if (token && nome) {
         const isProfessor = vinculo === 'professor' || vinculo === 'pesquisador';
 
