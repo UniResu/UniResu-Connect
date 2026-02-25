@@ -7,8 +7,8 @@ from fastapi.responses import RedirectResponse
 
 router = APIRouter(prefix="/api/orcid", tags=["ORCID"])
 
-ORCID_CLIENT_ID       = os.getenv("ORCID_CLIENT_ID", "")
-ORCID_CLIENT_SECRET   = os.getenv("ORCID_CLIENT_SECRET", "")
+ORCID_CLIENT_ID       = os.getenv("ORCID_CLIENT_ID", "APP-MCVYKS2NO8BD3IUZ")
+ORCID_CLIENT_SECRET   = os.getenv("ORCID_CLIENT_SECRET", "902a2648-b3d1-494a-9dfd-be9d5a0962d7")
 ORCID_REDIRECT_URI    = os.getenv("ORCID_REDIRECT_URI",  "http://127.0.0.1:8000/api/orcid/callback")
 ORCID_BASE_URL        = "https://orcid.org"
 FRONTEND_REGISTER_URL = "http://127.0.0.1:5500/src/pages/register.html"
