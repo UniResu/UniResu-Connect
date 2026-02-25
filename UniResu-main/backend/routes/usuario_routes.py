@@ -69,5 +69,6 @@ def login_usuario(user: UsuarioLogin):
         "access_token": token,
         "token_type": "bearer",
         "nome": usuario_db.get("nome", "Usuário sem nome"),
+        "email": usuario_db.get("email", ""), 
         "vinculo": usuario_db.get("vinculo", "Não informado")
     }

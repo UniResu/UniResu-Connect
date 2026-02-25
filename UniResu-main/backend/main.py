@@ -6,10 +6,11 @@ from backend.routes.projeto_routes import router as router_projeto
 from backend.routes.forum_routes import router as router_forum
 from backend.auth.auth_recuperacao import router as recuperacao_router
 from backend.routes.orcid_routes import router as router_orcid
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
 load_dotenv()
-app = FastAPI(title="UniResu API")
+
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,

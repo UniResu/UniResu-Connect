@@ -9,9 +9,9 @@ from backend.database.connection import get_db
 
 load_dotenv(dotenv_path="../.env")
 
-SECRET_KEY = os.getenv("SECRET_KEY", "chave_secreta_fallback_super_segura")
+SECRET_KEY = os.getenv("SECRET_KEY", "a45a306135f631b0179a618f0a8274d119436f010b93a0c36b8018f3b1ac6c7a")
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/usuarios/login")
 
@@ -31,9 +31,8 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     else:
         expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
 
-    to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-    return encoded_jwt
+    to_encode["exp"] = expire
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 def get_usuario_atual(token: str = Depends(oauth2_scheme)):
     """
@@ -51,8 +50,8 @@ def get_usuario_atual(token: str = Depends(oauth2_scheme)):
         email: str = payload.get("sub")
         if email is None:
             raise credentials_exception
-    except JWTError:
-        raise credentials_exception
+    except JWTError as e:
+        raise credentials_exception from e
 
     db = get_db()
     if db is None:
