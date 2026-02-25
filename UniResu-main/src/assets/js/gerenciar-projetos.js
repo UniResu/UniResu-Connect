@@ -9,9 +9,23 @@ if (!token || (vinculo !== 'professor' && vinculo !== 'pesquisador')) {
 }
 
 document.getElementById('area-usuario').innerHTML = `
-    <span style="font-weight:600;">Olá, ${nome}</span>
-    <button onclick="logout()" style="margin-left:12px; cursor:pointer;">Sair</button>
+    <div class="user-menu">
+        <span class="user-trigger">Olá, ${nome} <span class="arrow">▾</span></span>
+        <div class="dropdown">
+            <a href="./gerenciar-projetos.html">Gerenciar Projetos</a>
+            <a href="#" id="btn-logout">Sair</a>
+        </div>
+    </div>
 `;
+
+document.getElementById('btn-logout').addEventListener('click', logout);
+
+const menu = document.querySelector('.user-menu');
+menu.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+});
+document.addEventListener('click', () => menu.classList.remove('open'));
 
 function logout() {
     localStorage.removeItem('token');
@@ -145,24 +159,3 @@ function editarProjeto(id) {
             window.scrollTo(0, 0);
         });
 }
-
-async function excluirProjeto(id) {
-    if (!confirm('Tem certeza que deseja excluir este projeto?')) return;
-
-    try {
-        const response = await fetch(`${API_BASE_URL}/api/projetos/${id}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${token}` }
-        });
-
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.detail);
-
-        alert('Projeto excluído com sucesso!');
-        carregarMeusProjetos();
-    } catch (err) {
-        alert(`Erro: ${err.message}`);
-    }
-}
-
-carregarMeusProjetos();

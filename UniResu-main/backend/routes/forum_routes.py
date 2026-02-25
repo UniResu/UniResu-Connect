@@ -3,9 +3,9 @@ from typing import List, Dict, Any
 from pymongo.results import InsertOneResult, UpdateResult
 from bson import ObjectId
 from datetime import datetime, timezone
-from database.connection import get_db
-from models.forum_model import TopicoCreate, TopicoResponse, RespostaCreate
-from auth.autenticacao import get_usuario_atual
+from backend.database.connection import get_db
+from backend.models.forum_model import TopicoCreate, TopicoResponse, RespostaCreate
+from backend.auth.autenticacao import get_usuario_atual
 
 router = APIRouter()
 

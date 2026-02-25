@@ -32,7 +32,7 @@
             <p class="login-hint" id="msg-login">
                 Você deve estar conectado para gerenciar seus projetos.
             </p>
-            <button class="btn-enter" id="btn-entrar-login" onclick="window.location.href='./login.html'">Login</button>
+            <button class="btn-enter" id="btn-entrar-login">Login</button>
             <form class="search-form" id="form-busca">
                 <div class="inputs-row">
                     <input type="text" placeholder="Buscar" id="input-buscar">
@@ -81,64 +81,36 @@
             Conectando a Comunidade Acadêmica | Realizado por UniResu - Conectando a Comunidade Acadêmica.</p>
     </footer>
 
-    <div id="modal-projeto"
-        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
-        <div
-            style="background:#fff; border-radius:12px; padding:32px; max-width:600px; width:90%; max-height:85vh; overflow-y:auto; position:relative;">
-            <button id="modal-fechar"
-                style="position:absolute; top:16px; right:16px; background:none; border:none; font-size:1.4rem; cursor:pointer;">✕</button>
+    <div id="modal-projeto">
+        <div class="modal-box">
+            <button id="modal-fechar" class="modal-fechar">✕</button>
 
-            <h2 id="modal-titulo" style="margin-bottom:8px;"></h2>
+            <h2 id="modal-titulo" class="modal-titulo"></h2>
             <p><strong>Instituição:</strong> <span id="modal-instituicao"></span></p>
             <p><strong>Professor/Pesquisador:</strong> <span id="modal-professor"></span></p>
             <p><strong>Localização:</strong> <span id="modal-local"></span></p>
             <p><strong>Modalidade:</strong> <span id="modal-modalidade"></span></p>
             <p><strong>Tipo:</strong> <span id="modal-tipo"></span></p>
-            <p style="margin-top:12px;"><strong>Descrição:</strong></p>
-            <p id="modal-descricao" style="color:#555; line-height:1.6;"></p>
+            <p class="modal-descricao-label"><strong>Descrição:</strong></p>
+            <p id="modal-descricao" class="modal-descricao-texto"></p>
 
-            <hr style="margin:24px 0;">
+            <hr class="modal-divider">
 
-            <h3 style="margin-bottom:16px;">Candidatar-se</h3>
+            <h3 class="modal-candidatura-titulo">Candidatar-se</h3>
             <form id="form-candidatura">
-                <label style="display:block; margin-bottom:6px;">Seu e-mail</label>
-                <input type="email" id="candidatura-email" required
-                    style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px; margin-bottom:16px; box-sizing:border-box;">
+                <label class="form-label">Seu e-mail</label>
+                <input type="email" id="candidatura-email" class="form-input" required>
 
-                <label style="display:block; margin-bottom:6px;">Anexar currículo (PDF ou DOCX)</label>
-                <input type="file" id="candidatura-curriculo" accept=".pdf,.docx" required style="margin-bottom:20px;">
+                <label class="form-label">Anexar currículo (PDF ou DOCX)</label>
+                <input type="file" id="candidatura-curriculo" accept=".pdf,.docx" class="form-file" required>
 
-                <button type="submit" id="btn-candidatar"
-                    style="width:100%; padding:12px; background:#6a0dad; color:#fff; border:none; border-radius:6px; font-size:1rem; cursor:pointer;">
+                <button type="submit" id="btn-candidatar" class="btn-candidatar">
                     Candidatar-se
                 </button>
             </form>
         </div>
     </div>
 
-    <script>
-        const token = localStorage.getItem('token');
-        const nome = localStorage.getItem('usuario_nome');
-        const vinculo = localStorage.getItem('usuario_vinculo');
-
-        if (token && nome) {
-            const isProfessor = vinculo === 'professor' || vinculo === 'pesquisador';
-            document.getElementById('area-usuario').innerHTML = `
-            ${isProfessor ? '<a href="./gerenciar-projetos.html" style="margin-right:12px; color:#6a0dad; font-weight:600;">Gerenciar Projetos</a>' : ''}
-            <span style="font-weight:600;">Olá, ${nome}</span>
-            <button onclick="logout()" style="margin-left:12px; cursor:pointer;">Sair</button>
-        `;
-            document.getElementById('msg-login').style.display = 'none';
-            document.getElementById('btn-entrar-login').style.display = 'none';
-        }
-
-        function logout() {
-            localStorage.removeItem('token');
-            localStorage.removeItem('usuario_nome');
-            localStorage.removeItem('usuario_vinculo');
-            window.location.reload();
-        }
-    </script>
     <script src="../assets/js/projetos.js"></script>
 </body>
 

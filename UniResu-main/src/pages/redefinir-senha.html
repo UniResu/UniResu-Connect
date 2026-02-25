@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir senha - UniResu</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <img src="../assets/img/uniresulogo.png" alt="Logo UniResu" class="auth-logo">
+            <h1>Redefinir senha</h1>
+            <p class="auth-subtitle">Digite sua nova senha abaixo.</p>
+
+            <form id="form-redefinir">
+                <label class="form-label">Nova senha</label>
+                <input type="password" id="input-senha" class="form-input" placeholder="Mínimo 6 caracteres" required minlength="6">
+
+                <label class="form-label">Confirmar nova senha</label>
+                <input type="password" id="input-confirmar" class="form-input" placeholder="Repita a senha" required minlength="6">
+
+                <button type="submit" class="btn-primary" id="btn-redefinir">Redefinir senha</button>
+            </form>
+
+            <p id="msg-feedback" class="msg-feedback" style="display:none;"></p>
+
+            <a href="./login.html" class="auth-link">← Voltar para o login</a>
+        </div>
+    </div>
+
+    <script src="../assets/js/redefinir.js"></script>
+</body>
+
+</html>

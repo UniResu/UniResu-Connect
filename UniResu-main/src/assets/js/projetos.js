@@ -1,10 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const API_BASE_URL = 'http://127.0.0.1:8000';
+    const token = localStorage.getItem('token');
+    const nome = localStorage.getItem('usuario_nome');
+    const vinculo = localStorage.getItem('usuario_vinculo');
+    const nomeAluno = localStorage.getItem('usuario_nome');
+
+    // === DROPDOWN DO USUÁRIO ===
+    if (token && nome) {
+        const isProfessor = vinculo === 'professor' || vinculo === 'pesquisador';
+
+        document.getElementById('area-usuario').innerHTML = `
+            <div class="user-menu">
+                <span class="user-trigger">Olá, ${nome} <span class="arrow">▾</span></span>
+                <div class="dropdown">
+                    ${isProfessor ? '<a href="./gerenciar-projetos.html">Gerenciar Projetos</a>' : ''}
+                    <a href="#" id="btn-logout">Sair</a>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('btn-logout').addEventListener('click', logout);
+
+        const menu = document.querySelector('.user-menu');
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('open');
+        });
+        document.addEventListener('click', () => menu.classList.remove('open'));
+
+        document.getElementById('msg-login').style.display = 'none';
+        document.getElementById('btn-entrar-login').style.display = 'none';
+    } else {
+        document.getElementById('btn-entrar-login').addEventListener('click', () => {
+            window.location.href = './login.html';
+        });
+    }
+
+    function logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('usuario_nome');
+        localStorage.removeItem('usuario_vinculo');
+        window.location.reload();
+    }
+
     const searchForm = document.getElementById('form-busca');
     const projectListContainer = document.getElementById('lista-projetos');
-    const token = localStorage.getItem('token');
-    const nomeAluno = localStorage.getItem('usuario_nome');
 
     loadInitialProjects();
 
@@ -17,10 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const buscar = document.getElementById('input-buscar').value;
         const local = document.getElementById('input-local').value;
         const area = document.getElementById('select-area').value;
-        
-        // AJUSTE AQUI: Verifica se o checkbox de remoto está marcado
         const apenasRemoto = document.getElementById('check-remoto').checked;
-        
         const tipoCheckboxes = document.querySelectorAll('input[name="tipo_projeto"]:checked');
         const tipos = Array.from(tipoCheckboxes).map(cb => cb.value);
 
@@ -28,10 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (buscar) params.append('q', buscar);
         if (local) params.append('local', local);
         if (area) params.append('area', area);
-        
-        // AJUSTE AQUI: Se estiver marcado, envia a string 'remoto' para bater com o novo controller
         if (apenasRemoto) params.append('modalidade', 'remoto');
-        
         if (tipos.length > 0) params.append('tipos', tipos.join(','));
 
         fetchAndRenderProjects(`${API_BASE_URL}/api/projetos/buscar?${params.toString()}`);
@@ -92,13 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modal-professor').textContent = project.nome_professor || 'Não informado';
         document.getElementById('modal-tipo').textContent = project.tipo || '';
 
-        // MAPEAMENTO: Transforma o valor do banco em texto amigável
         const modalidades = { presencial: 'Presencial', hibrido: 'Híbrido', remoto: 'Remoto' };
         const modalidadeTexto = modalidades[project.modalidade] || project.modalidade || 'Não informado';
 
-        // INJEÇÃO: Preenche o campo que estava ficando vazio
         document.getElementById('modal-modalidade').textContent = modalidadeTexto;
-        document.getElementById('modal-local').textContent = project.local || 'Rio de Janeiro'; 
+        document.getElementById('modal-local').textContent = project.local || 'Rio de Janeiro';
 
         const form = document.getElementById('form-candidatura');
         form.onsubmit = (e) => enviarCandidatura(e, project);
@@ -157,4 +190,5 @@ document.addEventListener('DOMContentLoaded', () => {
             btnEnviar.disabled = false;
         }
     }
+
 });

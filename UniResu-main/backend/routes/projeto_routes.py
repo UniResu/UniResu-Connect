@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Query, UploadFile, File, Form, HTTPException, Depends, status
 from typing import List, Optional
-from controllers.projeto_controller import buscar_projetos_controller
-from models.projeto_model import ProjetoResponse, ProjetoCreate
-from auth.autenticacao import get_usuario_atual
-from database.connection import get_db
+from backend.controllers.projeto_controller import buscar_projetos_controller
+from backend.models.projeto_model import ProjetoResponse, ProjetoCreate
+from backend.auth.autenticacao import get_usuario_atual
+from backend.database.connection import get_db
 from bson import ObjectId
 import smtplib
 import os

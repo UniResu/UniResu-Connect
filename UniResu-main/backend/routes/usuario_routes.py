@@ -1,14 +1,14 @@
 from fastapi import APIRouter, HTTPException, status
-from database.connection import get_db
-from models.usuario_model import UsuarioCreate, UsuarioResponse, UsuarioLogin
-from auth.autenticacao import hash_password, verify_password, create_access_token
+from backend.database.connection import get_db
+from backend.models.usuario_model import UsuarioCreate, UsuarioResponse, UsuarioLogin
+from backend.auth.autenticacao import hash_password, verify_password, create_access_token
 
 router = APIRouter()
 
 def formatar_usuario(usuario_db):
     return {
         "id": str(usuario_db["_id"]),
-        "nome": usuario_db.get("nome", ""),
+        "nome": usuario_db.get("nome", "Usuário sem nome"),
         "email": usuario_db.get("email", ""),
         "instituicao": usuario_db.get("instituicao", ""),
         "vinculo": usuario_db.get("vinculo", "")
@@ -53,8 +53,8 @@ def login_usuario(user: UsuarioLogin):
     token = create_access_token(data={"sub": usuario_db["email"]})
     
     return {
-    "access_token": token,
-    "token_type": "bearer",
-    "nome": usuario_db["nome"],
-    "vinculo": usuario_db["vinculo"]
-}
+        "access_token": token,
+        "token_type": "bearer",
+        "nome": usuario_db.get("nome", "Usuário sem nome"),
+        "vinculo": usuario_db.get("vinculo", "Não informado")
+    }

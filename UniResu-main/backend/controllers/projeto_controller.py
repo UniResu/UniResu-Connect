@@ -1,5 +1,5 @@
 from typing import List, Optional, Dict, Any
-from database.connection import get_db
+from backend.database.connection import get_db
 
 TIPO_LABELS = {
     "institucional_aberto": "Projeto Institucional (Aberto)",

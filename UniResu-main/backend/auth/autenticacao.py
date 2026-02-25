@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from dotenv import load_dotenv
-from database.connection import get_db
+from backend.database.connection import get_db
 
 load_dotenv(dotenv_path="../.env")
 
