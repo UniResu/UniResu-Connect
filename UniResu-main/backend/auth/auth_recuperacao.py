@@ -11,7 +11,7 @@ from backend.auth.autenticacao import hash_password
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 587
 SMTP_USER = "uniresuconnect@gmail.com"
-SMTP_PASS = "ekebdwuwqdgqhgaf" 
+SMTP_PASS = "" 
 URL_FRONTEND = "http://localhost:5500"
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
