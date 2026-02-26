@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const CONFIG = {
-        API_URL: 'http://localhost:8000/api/forum',
+        API_URL: 'https://uniresu-connect.onrender.com/api/forum',
         VINCULOS_PERMITIDOS: ["professor", "pesquisador"]
     };
 

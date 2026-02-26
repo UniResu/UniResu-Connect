@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const API_BASE_URL = 'http://127.0.0.1:8000';
+    const API_BASE_URL = 'https://uniresu-connect.onrender.com';
     const token = localStorage.getItem('token');
     const nome = localStorage.getItem('usuario_nome');
     const vinculo = localStorage.getItem('usuario_vinculo');

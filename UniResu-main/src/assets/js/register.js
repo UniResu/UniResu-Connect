@@ -51,7 +51,7 @@ function conectarOrcid() {
     sessionStorage.setItem("form_email",       document.getElementById("email").value.trim());
     sessionStorage.setItem("form_instituicao", document.getElementById("instituicao").value.trim());
     sessionStorage.setItem("form_vinculo",     document.getElementById("vinculo").value);
-    window.location.href = "http://127.0.0.1:8000/api/orcid/connect";
+    window.location.href = "https://uniresu-connect.onrender.com/api/orcid/connect";
 }
 
 function restaurarFormulario() {
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Tentando cadastrar com os dados:", { nome, email, instituicao, vinculo, orcidId });
 
             try {
-                const response = await fetch("http://127.0.0.1:8000/api/usuarios/registrar", {
+                const response = await fetch("https://uniresu-connect.onrender.com/api/usuarios/registrar", {
                     method: "POST",
                     headers: { 
                         "Content-Type": "application/json",

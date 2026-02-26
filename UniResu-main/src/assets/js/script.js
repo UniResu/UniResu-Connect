@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function buscarUsuariosDoBackend() {
 
-        const urlDoBackend = 'http://127.0.0.1:8000/api/usuarios';
+        const urlDoBackend = 'https://uniresu-connect.onrender.com/api/usuarios';
 
         console.log("JS Frontend: Tentando buscar dados do backend Python...");
 
