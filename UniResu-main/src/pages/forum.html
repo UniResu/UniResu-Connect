@@ -11,36 +11,56 @@
 
 <body>
     <header class="navbar">
-        <div class="logo">
+        <div class="navbar-logo">
             <img src="../assets/img/uniresulogo.png" alt="Logo UniResu">
         </div>
         <ul class="nav-links">
             <li><a href="../../index.html#home">Home</a></li>
             <li><a href="../../index.html#quem-somos">Quem Somos</a></li>
             <li><a href="./projetos.html#projetos">Projetos Acadêmicos</a></li>
-            <li><a href="./forum.html#forum">Fórum</a></li>
+            <li><a href="./forum.html#forum" class="active">Fórum</a></li>
         </ul>
-
         <div id="area-usuario">
-            <a href="./register.html" class="btn-register">Registre-se</a>
+            <a href="./register.html" class="btn btn-register">Registre-se</a>
         </div>
     </header>
 
     <main class="forum-container">
-        <h1>Forum</h1>
+        <h1 class="forum-title">Fórum</h1>
+
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Buscar tópicos...">
+            <input type="text" id="searchInput" class="search-input" placeholder="Buscar tópicos...">
         </div>
 
-        <section class="topics-list" id="topicsList">
-        </section>
+        <section class="topics-list" id="topicsList"></section>
 
-        <button id="newTopicBtn" class="new-topic-btn">+ Novo Tópico</button>
+        <button id="newTopicBtn" class="btn btn-primary is-hidden" style="margin-top: 20px;">+ Novo Tópico</button>
     </main>
 
+    <div id="modalNovoTopico" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModalBtn">&times;</span>
+            <h2 style="color: var(--color-primary); margin-bottom: 5px;">Criar Novo Tópico</h2>
+            <p style="color: var(--color-text-muted); font-size: 14px; margin-bottom: 10px;">Preencha os campos abaixo para publicar seu tópico no fórum.</p>
+
+            <div class="form-group">
+                <label class="form-label" for="tituloTopico">Título do Tópico</label>
+                <input type="text" id="tituloTopico" class="form-control" placeholder="Ex: Dúvida sobre Inscrição em Projetos">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="descricaoTopico">Descrição</label>
+                <textarea id="descricaoTopico" class="form-control" rows="5" placeholder="Descreva sua dúvida ou assunto detalhadamente..."></textarea>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                <button id="btnPublicarTopico" class="btn btn-primary">Publicar Tópico</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-        <p>Grupo Acadêmico UniResu | Copyright © 2025 UniResu - Conectando a Comunidade Acadêmica | Realizado por
-            UniResu - Conectando a Comunidade Acadêmica.</p>
+        <p>Grupo Acadêmico UniResu | Copyright © 2025 UniResu - Conectando a Comunidade Acadêmica | Realizado por UniResu - Conectando a Comunidade Acadêmica.</p>
     </footer>
 
     <script src="../assets/js/forum.js"></script>

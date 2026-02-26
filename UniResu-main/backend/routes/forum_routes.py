@@ -8,6 +8,7 @@ router = APIRouter()
 
 class TopicoCriar(BaseModel):
     titulo: str
+    descricao: str = ""
 
 class VotoInput(BaseModel):
     type: str
@@ -17,6 +18,7 @@ def serializar_topico(t: dict) -> dict:
     return {
         "id": str(t["_id"]),
         "titulo": t.get("titulo", ""),
+        "descricao": t.get("descricao", ""),
         "autor_email": t.get("autor_email", ""),
         "likes": t.get("likes", 0),
         "dislikes": t.get("dislikes", 0),
@@ -29,7 +31,7 @@ async def listar_topicos():
     Rota pública — qualquer visitante pode ver os tópicos e seus autores.
     """
     db = get_db()
-    topicos = list(db.forum.find())
+    topicos = list(db.topicos_forum.find())
     return [serializar_topico(t) for t in topicos]
 
 
@@ -57,8 +59,16 @@ async def criar_topico(
             detail="O título do tópico não pode estar vazio."
         )
 
+    descricao = dados.descricao.strip()
+    if not descricao:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="A descrição do tópico não pode estar vazia."
+        )
+
     novo_topico = {
         "titulo": titulo,
+        "descricao": descricao,
         "autor_email": usuario_atual.get("email", "Desconhecido"),
         "likes": 0,
         "dislikes": 0,
@@ -67,7 +77,7 @@ async def criar_topico(
     }
 
     db = get_db()
-    resultado = db.forum.insert_one(novo_topico)
+    resultado = db.topicos_forum.insert_one(novo_topico)
 
     return {
         "mensagem": "Tópico criado com sucesso.",
@@ -92,7 +102,7 @@ async def deletar_topico(
         )
 
     db = get_db()
-    topico = db.forum.find_one({"_id": oid})
+    topico = db.topicos_forum.find_one({"_id": oid})
 
     if not topico:
         raise HTTPException(
@@ -106,7 +116,7 @@ async def deletar_topico(
             detail="Você não tem permissão para deletar este tópico."
         )
 
-    db.forum.delete_one({"_id": oid})
+    db.topicos_forum.delete_one({"_id": oid})
 
     return {"mensagem": "Tópico deletado com sucesso."}
 
@@ -138,7 +148,7 @@ async def votar_topico(
         )
 
     db = get_db()
-    topico = db.forum.find_one({"_id": oid})
+    topico = db.topicos_forum.find_one({"_id": oid})
 
     if not topico:
         raise HTTPException(
@@ -151,25 +161,22 @@ async def votar_topico(
     voto_anterior = votos_usuarios.get(email)
 
     if voto_anterior == voto.type:
-        
         update = {
             "$inc": {f"{voto.type}s": -1},
             "$unset": {f"votos_usuarios.{email}": ""}
         }
     elif voto_anterior is None:
-        
         update = {
             "$inc": {f"{voto.type}s": 1},
             "$set": {f"votos_usuarios.{email}": voto.type}
         }
     else:
-        
         update = {
             "$inc": {f"{voto_anterior}s": -1, f"{voto.type}s": 1},
             "$set": {f"votos_usuarios.{email}": voto.type}
         }
 
-    db.forum.update_one({"_id": oid}, update)
-    topico_atualizado = db.forum.find_one({"_id": oid})
+    db.topicos_forum.update_one({"_id": oid}, update)
+    topico_atualizado = db.topicos_forum.find_one({"_id": oid})
 
     return serializar_topico(topico_atualizado)
