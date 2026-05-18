@@ -4,115 +4,93 @@
 
 # Personas
 
-*Persona 1 – Lucas Alves*
+<div align="center">
 
-- Idade: 18 anos
-- Profissão: Estudante Universitário
-- Localização: Belo Horizonte – MG
-- Formação: Ensino Superior em andamento
-- Objetivo: Iniciar em um projeto de pesquisa
+| Lucas Alves   | <img width="200" height="200" alt="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygpGdRqX58iOJ-TZIbP_Rp6s1WWCUNw-neA&s"/> |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Idade:        | 18 anos                                                                                                                                  |
+| Ocupação:   | Estudante Universitário                                                                                                             |
+| Expectativas: | Encontrar uma plataforma única que centralize todas as oportunidades e ter acesso a projetos com baixa barreira de entrada, ideais para uma primeira experiência.                        |
+| Dores:        | A informação sobre projetos é pulverizada em diversos canais, tornando o acompanhamento difícil e ineficiente. Além disso, sente-se inseguro para abordar professores diretamente sem um processo formal.   |
 
-Descrição:
-Estudante do primeiro período de Engenharia de Computação, 18 anos. É proativo e possui grande interesse em participar da vida acadêmica, mas sente-se desorientado pela falta de um ponto de partida claro e de uma rede de contatos na universidade.
+</div>
 
-Dores:
-A informação sobre projetos é pulverizada em diversos canais, tornando o acompanhamento difícil e ineficiente. Além disso, sente-se inseguro para abordar professores diretamente sem um processo formal.
+<div align="center">
 
-Expectativas:
-Encontrar uma plataforma única que centralize todas as oportunidades e ter acesso a projetos com baixa barreira de entrada, ideais para uma primeira experiência.
+| Juliana Costa | <img width="200" height="200" alt="image" src="https://i.pravatar.cc/200?img=5"/>                                               |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Idade:            | 26 anos                                                                                                                                   |
+| Ocupação:       | Estudante Universitária                                                                                                          |
+| Expectativas:     | Utilizar filtros de busca avançados para encontrar rapidamente vagas em sua área de nicho e acessar informações detalhadas sobre pré-requisitos, atividades e resultados esperados. |
+| Dores:            | Perde muito tempo filtrando oportunidades irrelevantes para seus objetivos específicos e acha frequentemente vagas interessantes sem uma descrição, impedindo uma avaliação clara do escopo do trabalho.                            |
 
-*Persona 2 – Juliana Costa*
+</div>
 
-- Idade: 26 anos
-- Profissão: Estudante Universitária
-- Localização: São Paulo – SP
-- Formação: Ensino Superior em andamento
-- Objetivo: Primeira experiência acadêmica apra enriquecer seu currículo em uma iniciação científica.
+<br>
 
-Descrição:
-Aluna do sétimo período de Medicina, 26 anos. Está focada em sua carreira e busca uma experiência de pesquisa de alto impacto para enriquecer seu currículo para uma futura pós-graduação.
+<div align="center">
 
-Dores:
-Perde muito tempo filtrando oportunidades irrelevantes para seus objetivos específicos e acha frequentemente vagas interessantes sem uma descrição, impedindo uma avaliação clara do escopo do trabalho.
+| Profª. Drª. Helena Medeiros | <img width="200" height="200" alt="image" src="https://i.pravatar.cc/200?img=12"/>                               |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Idade:                | 48 anos                                                                                                                |
+| Ocupação:           | Professora e Pesquisadora Universitária                                                                                         |
+| Expectativas:         | Ter um canal único e eficiente para divulgar suas vagas para toda a universidade. Receber candidaturas mais qualificadas através de pré-requisitos claros. |
+| Dores:                | O processo de divulgação de vagas é burocrático e atinge um público limitado. Recebe um volume elevado de candidaturas de alunos que não possuem o perfil técnico necessário.  |
 
-Expectativas: Utilizar filtros de busca avançados para encontrar rapidamente vagas em sua área de nicho e acessar informações detalhadas sobre pré-requisitos, atividades e resultados esperados.
 
-*Persona 3 – Profª. Drª. Helena Medeiros (Docente Pesquisadora Estabelecida)*
+</div>
 
-- Idade: 48 anos
-- Profissão: Professora e Pesquisadora Universitária
-- Localização: Rio de Janeiro – RJ
-- Formação: Pós-doutorado completo
-- Objetivo: Recrutar estudantes empenhados a produzir materiais para pesquisas e que buscam seguir a carreira acadêmica.
+<br>
 
-Descrição:
-Pesquisadora do Departamento de Biologia e professora adjunta, 48 anos. Coordena um laboratório com múltiplos projetos e considera o recrutamento de alunos um ônus administrativo que consome tempo de pesquisa.
+<br>
 
-Dores:
-O processo de divulgação de vagas é burocrático e atinge um público limitado. 
-Recebe um volume elevado de candidaturas de alunos que não possuem o perfil técnico necessário.
+<div align="center">
 
-Expectativas:
-Ter um canal único e eficiente para divulgar suas vagas para toda a universidade.
-Receber candidaturas mais qualificadas através de pré-requisitos claros.
+| Prof. Dr. Ricardo Barros | <img width="200" height="200" alt="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyr1DHnompOnHyFpItkm49yqG4q2q19NflCg&s"/>                               |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Idade:                | 34 anos                                                                                                                |
+| Ocupação:           | Professor e Pesquisador Universitário                                                                                         |
+| Expectativas:         | Uma plataforma que dê visibilidade igualitária a todos os projetos, novos ou antigos. Alcançar um público amplo e interdisciplinar de estudantes que possam se interessar pelo seu tema. |
+| Dores:                | Insegurança sobre quais os canais mais eficazes e seguros para divulgar seu novo projeto. Receio de não receber um número suficiente de candidatos qualificados. |
 
-*Persona 4 – Prof. Dr. Ricardo Barros (Docente em Início de Carreira)*
 
-- Idade: 34 anos
-- Profissão: Professor e Pesquisador Universitário
-- Localização: Manaus – AM 
-- Formação: Pós-graduação concluída
-- Objetivo: Divulgar para estudantes seu projeto de extensão
+</div>
 
-Descrição:
-Professor recém-contratado do Departamento de Letras, 34 anos. Está motivado para iniciar seu primeiro projeto de extensão, mas não possui uma rede de contatos com os estudantes e teme que seu projeto não tenha visibilidade.
+<br>
 
-Dores:
-Insegurança sobre quais os canais mais eficazes e seguros para divulgar seu novo projeto.
-Receio de não receber um número suficiente de candidatos qualificados.
+<br>
 
-Expectativas:
-Uma plataforma que dê visibilidade igualitária a todos os projetos, novos ou antigos.
-Alcançar um público amplo e interdisciplinar de estudantes que possam se interessar pelo seu tema.
+<div align="center">
 
-*Persona 5 – Drª. Carolina Lima (Pesquisadora Focada em Segurança)*
+| Drª. Carolina Lima | <img width="200" height="200" alt="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKCm-lq5FsRLWcrVY1n0LeMYzBBjfmPC6nDg&s"/>                               |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Idade:                | 32 anos                                                                                                                |
+| Ocupação:           | Pesquisadora                                                                                         |
+| Expectativas:         | Ambiente Controlado e Verificado, espera uma plataforma de acesso restrito à comunidade acadêmica (com login institucional), garantindo que todos os usuários são estudantes verificados. Deseja que a comunicação inicial ocorra dentro da plataforma, protegendo suas informações de contato direto até que ela se sinta segura para compartilhar. |
+| Dores:                | Exposição e Vulnerabilidade: Sente-se desconfortável em divulgar seu e-mail e contato pessoal em canais públicos ou listas de e-mail departamentais, temendo receber contatos inadequados, spam ou até mesmo assédio. Quer evitar comunicações fora de hora ou por canais não profissionais (como redes sociais pessoais), mantendo todas as interações dentro de um contexto estritamente acadêmico. |
 
-- Idade: 32 anos
-- Profissão: Pesquisadora
-- Localização: Pernambuco - PE
-- Formação: Pós-doutorado em andamento
-- Objetivo: Utilização de um ambiente profissional seguro e formal desde o primeiro contato
 
-Descrição:
-Drª. Carolina Lima, 32 anos, é uma pesquisadora de pós-doutorado no Instituto de Química. Recentemente, conseguiu financiamento para seu primeiro projeto de iniciação científica e busca recrutar uma aluna ou aluno. Como uma mulher jovem em uma posição de liderança acadêmica, ela se preocupa com a dinâmica de poder e preza pela criação de um ambiente profissional seguro e formal desde o primeiro contato.
+</div>
 
-Dores:
-Exposição e Vulnerabilidade: Sente-se desconfortável em divulgar seu e-mail e contato pessoal em canais públicos ou listas de e-mail departamentais, temendo receber contatos inadequados, spam ou até mesmo assédio. Quer evitar comunicações fora de hora ou por canais não profissionais (como redes sociais pessoais), mantendo todas as interações dentro de um contexto estritamente acadêmico.
+<br>
 
-Expectativas:
-Ambiente Controlado e Verificado, espera uma plataforma de acesso restrito à comunidade acadêmica (com login institucional), garantindo que todos os usuários são estudantes verificados. 
-Deseja que a comunicação inicial ocorra dentro da plataforma, protegendo suas informações de contato direto até que ela se sinta segura para compartilhar.
+<br>
 
-Persona 6 – Mariana Oliveira
-- Idade: 22 anos
-- Profissão: Estudante Universitária e Estagiária
-- Localização: Curitiba – PR
-- Formação: Ensino Superior em andamento (Arquitetura e Urbanismo)
-- Objetivo: Encontrar um orientador e um projeto de pesquisa que possa ser aproveitado como Trabalho de Conclusão de Curso (TCC).
+<div align="center">
 
-Descrição:
-Mariana está no oitavo período de Arquitetura e Urbanismo e já sente a pressão do TCC se aproximando. Ela trabalha como estagiária em um escritório 20 horas por semana para ajudar nas despesas e ganhar experiência profissional. É uma aluna dedicada e organizada, mas a dupla jornada torna seu tempo extremamente limitado.
+| Mariana Oliveira | <img width="200" height="200" alt="image" src="https://img.magnific.com/fotos-gratis/mulher-sorridente-segurando-o-livro-de-lado_23-2149915886.jpg?semt=ais_hybrid&w=740&q=80"/>                               |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Idade:                | 22 anos                                                                                                                |
+| Ocupação:           | Estudante Universitária e Estagiária                                                                                        |
+| Expectativas:         |Uma plataforma onde possa buscar professores não apenas por área de pesquisa, mas também por "disponibilidade para orientação de TCC". Encontrar projetos que indiquem claramente se há flexibilidade para adaptar o escopo e aproveitá-lo para o TCC. Ter acesso a filtros claros sobre a disponibilidade de bolsas e a carga horária semanal esperada, para que possa conciliar a pesquisa com seu trabalho.|
+| Dores:                | Acha difícil encontrar um professor orientador cuja linha de pesquisa se alinhe com seus interesses para o TCC e que, ao mesmo tempo, tenha disponibilidade para novos orientandos. Teme se engajar em um projeto de iniciação científica que, no final, não possa ser validado ou aproveitado como parte do seu TCC, o que seria um grande desperdício de seu tempo escasso. Necessidade Financeira: Uma bolsa de pesquisa seria o ideal para que ela pudesse reduzir as horas no estágio e se dedicar mais à vida acadêmica, mas as informações sobre bolsas são difíceis de encontrar e muitas vezes atreladas a projetos que não lhe interessam. |
 
-Dores:
-Acha difícil encontrar um professor orientador cuja linha de pesquisa se alinhe com seus interesses para o TCC e que, ao mesmo tempo, tenha disponibilidade para novos orientandos.
-Teme se engajar em um projeto de iniciação científica que, no final, não possa ser validado ou aproveitado como parte do seu TCC, o que seria um grande desperdício de seu tempo escasso.
-Necessidade Financeira: Uma bolsa de pesquisa seria o ideal para que ela pudesse reduzir as horas no estágio e se dedicar mais à vida acadêmica, mas as informações sobre bolsas são difíceis de encontrar e muitas vezes atreladas a projetos que não lhe interessam.
 
-Expectativas:
+</div>
 
-Uma plataforma onde possa buscar professores não apenas por área de pesquisa, mas também por "disponibilidade para orientação de TCC".
-Encontrar projetos que indiquem claramente se há flexibilidade para adaptar o escopo e aproveitá-lo para o TCC.
-Ter acesso a filtros claros sobre a disponibilidade de bolsas e a carga horária semanal esperada, para que possa conciliar a pesquisa com seu trabalho.
+<br>
+
+
 
 # Histórias de Usuários
 
