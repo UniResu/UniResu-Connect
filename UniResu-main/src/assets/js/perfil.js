@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         function handleFile(file) {
-            const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/markdown'];
+            const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/markdown', 'text/x-markdown'];
             const fileName = file?.name?.toLowerCase() || '';
             const isMarkdownByExtension = fileName.endsWith('.md');
 
