@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Alguns navegadores não informam MIME de forma consistente em uploads locais.
         if (!(hasAllowedType || hasAllowedExtension)) {
             alert('Tipo de arquivo não suportado. Por favor, anexe um PDF, DOCX ou MD.');
             return;
