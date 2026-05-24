@@ -5,9 +5,9 @@ O registro de testes de usabilidade é um documento ou planilha onde são coleta
 ## Perfil dos usuários que participaram do teste
 - Usuário 1: 45 anos, nível básico incompleto, conhecimento básico tecnologia
 - Usuário 2: 18 anos, nível superior incompleto, conhecimento avançado tecnologia
-- Usuário 1: 70 anos, nível básico incompleto, conhecimento básico tecnologia
-- Usuário 2: 25 anos, nível superior completo, conhecimento avançado tecnologia
-- Usuário 2: 28 anos, nível superior completo, conhecimento avançado tecnologia
+- Usuário 3: 70 anos, nível básico incompleto, conhecimento básico tecnologia
+- Usuário 4: 25 anos, nível superior completo, conhecimento avançado tecnologia
+- Usuário 5: 28 anos, nível superior completo, conhecimento avançado tecnologia
 
 ## Exemplo de tabela de registro dos testes de usabilidade  
 
