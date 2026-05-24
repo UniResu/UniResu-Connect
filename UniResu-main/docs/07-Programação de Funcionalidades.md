@@ -8,7 +8,6 @@ Nesta seção, a implementação do sistema descrita por meio dos requisitos fun
 - Microsoft Visual Studio (IDE de Codificação)
 - HTML e CSS (frontend)
 - Javascript (frontend)
-- C# (backend)
 - MySQL ou SQLServer(Base de Dados)
 - Bootstrap (template responsivo para frontend)
 - Github (documentação e controle de versão)
