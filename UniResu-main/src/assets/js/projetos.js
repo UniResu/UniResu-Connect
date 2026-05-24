@@ -152,9 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const emailAluno = document.getElementById('candidatura-email').value;
         const curriculo = document.getElementById('candidatura-curriculo').files[0];
+        const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/markdown', 'text/x-markdown'];
+        const fileName = curriculo?.name?.toLowerCase() || '';
+        const hasAllowedExtension = fileName.endsWith('.pdf') || fileName.endsWith('.docx') || fileName.endsWith('.md');
+        const hasAllowedType = curriculo && allowedTypes.includes(curriculo.type);
 
         if (!curriculo) {
             alert('Por favor, anexe seu currículo.');
+            return;
+        }
+
+        // Alguns navegadores não informam MIME de forma consistente em uploads locais.
+        if (!(hasAllowedType || hasAllowedExtension)) {
+            alert('Tipo de arquivo não suportado. Por favor, anexe um PDF, DOCX ou MD.');
             return;
         }
 

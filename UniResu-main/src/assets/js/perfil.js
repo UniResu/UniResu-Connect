@@ -94,14 +94,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         function handleFile(file) {
-            const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-            if (file && allowedTypes.includes(file.type)) {
+            const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/markdown', 'text/x-markdown'];
+            const fileName = file?.name?.toLowerCase() || '';
+            const hasAllowedExtension = fileName.endsWith('.pdf') || fileName.endsWith('.docx') || fileName.endsWith('.md');
+
+            if (file && (allowedTypes.includes(file.type) || hasAllowedExtension)) {
                 const dataTransfer = new DataTransfer();
                 dataTransfer.items.add(file);
                 fileInput.files = dataTransfer.files;
                 uploadFeedback.innerHTML = `<i class="fas fa-file-check" style="color: #2ecc71;"></i><span>${file.name}</span>`;
             } else {
-                alert('Tipo de arquivo não suportado. Por favor, anexe um PDF ou DOCX.');
+                alert('Tipo de arquivo não suportado. Por favor, anexe um PDF, DOCX ou MD.');
                 uploadFeedback.innerHTML = originalUploadHTML;
                 fileInput.value = '';
             }
