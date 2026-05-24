@@ -116,8 +116,8 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 | Lucas Alves (Estudante 1º período) | preciso de um filtro ou uma tag para projetos que aceitam iniciantes | para encontrar vagas compatíveis com meu nível de conhecimento e aumentar minhas chances de ser selecionado. |
 | Lucas Alves (Estudante 1º período) | preciso de um sistema de candidatura simplificado e direto na plataforma |para formalizar meu interesse de maneira segura e sem a necessidade de enviar e-mails repetitivos aos orientadores dos projetos |
 | Juliana Costa (Universitária com foco se tornar pesquisadora)       | preciso acessar descrições de vagas detalhadas, com pré-requisitos, atividades e resultados esperados | para tomar decisões informadas e não perder tempo com candidaturas inadequadas  |
-| Juliana Costa (Universitária com foco se tornar pesquisadora)      | preciso de um Forum para interação com pesquisadores, alunos e professores de diversas áreas | para esclarecer dúvidas sobre os projetos e iniação científica |
-| Juliana Costa (Universitária com foco se tornar pesquisadora)       | preciso de um Forum seguro para interações profissionais e amigáveis com outros estudantes universitários  | para compartilhar conhecimento, interagir, motivar e ajudar a comunidade científica  |
+| Juliana Costa (Universitária com foco se tornar pesquisadora)      | preciso de um fórum para interação com pesquisadores, alunos e professores de diversas áreas | para esclarecer dúvidas sobre os projetos e iniação científica |
+| Juliana Costa (Universitária com foco se tornar pesquisadora)       | preciso de um fórum seguro para interações profissionais e amigáveis com outros estudantes universitários  | para compartilhar conhecimento, interagir, motivar e ajudar a comunidade científica  |
 | Mariana Oliveira (Estudante com Foco no TCC)   | preciso de um filtro para buscar projetos que declaram explicitamente a possibilidade de aproveitamento para o Trabalho de Conclusão de Curso  | para otimizar minha busca e investir meu esforço em uma oportunidade com duplo benefício |
 | Mariana Oliveira (Estudante com Foco no TCC) | preciso visualizar claramente a carga horária semanal exigida e se o projeto oferece bolsa |  para tomar uma decisão realista que se encaixe na minha rotina e orçamento. |
 | Mariana Oliveira (Estudante com Foco no TCC) | preciso acessar o perfil dos professores na plataforma, com suas linhas de pesquisa e um indicador de "disponibilidade para orientação de TCC" | para encontrar o orientador ideal de forma mais direta e que se alinhe com a minha prosta de TCC. |
@@ -146,8 +146,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-013| O sistema deve disponibilizar uma área com materiais e informações sobre escrita científica | ALTA N-X|
 |RF-014| O sistema deve possuir uma página inicial (Homepage) que destaque as principais funcionalidades e oportunidades | ALTA |
 |RF-015| O sistema deve possiblitar o usuário abrir os projetos e candidatar-se à vagas | ALTA |
-|RF-016|  | MÉDIA |
-|RF-017|  | MÉDIA |
+|RF-016| O sistema deve possibilitar que as ofertas de vagas fiquem disponíveis por um período de tempo padrão ou determinado pelos pesquisadores, e sejam automatiamente fechadas após esse período. | MÉDIA |
+|RF-017| O sistema deve possibilitar a reabertura de vagas fechadas pelos pesquisadores responsáveis. | MÉDIA |
 |RF-018|  | MÉDIA |
 |RF-019|  | MÉDIA |
 |RF-020|  | MÉDIA |
@@ -182,20 +182,21 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-004| O processo de candidatura será interno à plataforma (sem envio de e-mails diretos)    |
 |RST-005| O sistema não proverá gestão de documentos acadêmicos (como submissão de artigos ou relatórios finais)    |
 |RST-006| O sistema não terá moderação automatizada de conteúdo no fórum; a moderação será inicial e manual    |
-|RST-007| A comunicação inicial entre professores e alunos será restrita a interações dentro da plataforma    |
+|RST-007| A comunicação inicial entre professores e alunos será restrita a interações por e-mail    |
 |RST-008| A plataforma não garante a oferta de bolsas ou financiamento; essa informação dependerá do cadastramento feito pelos professores    |
 |RST-009| A plataforma não permitirá qualquer tipo de violência e preconceito, esses atos ocasionarão a expulsão permanente do usuário na plataforma  |
 |RST-010| O sistema não terá integração direta com sistemas acadêmicos de matrícula ou secretaria  |
 |RST-011| O sistema não realizará validação automática da disponibilidade real dos orientadores  |
 |RST-012| A plataforma não fornecerá serviços de chat em tempo real (apenas mensagens assíncronas)  |
 |RST-013| O sistema não oferecerá recomendações automáticas baseadas em inteligência artificial na versão inicial  |
-|RST-014| A autenticação será limitada a usuários internos de universidades cadastradas; pessoas externas não poderão acessar  |
-|RST-015| O sistema não realizará análise automática de currículos ou perfis dos alunos  |
-|RST-016| O sistema não mediará interações entre os participantes fora do forum, como mensagens privadas diretas |
-|RST-017| O sistema não fará validação automática da veracidade de projetos cadastrados  |
-|RST-018|   |
+|RST-014| A autenticação será limitada a usuários internos de universidades cadastradas; pessoas externas só poderão acessar mediante pedido pela plataforma |
+|RST-015| O pedido de acesso pela plataforma será confirmado manualmente nesta fase inicial |
+|RST-016| O sistema não realizará análise automática de currículos ou perfis dos alunos  |
+|RST-017| O sistema não mediará interações entre os participantes fora do fórum, como mensagens privadas diretas |
+|RST-018| O sistema não fará validação automática da veracidade de projetos cadastrados  |
 |RST-019|   |
 |RST-020|   |
+|RST-021|   |
 
 # Alterações futuras
 
