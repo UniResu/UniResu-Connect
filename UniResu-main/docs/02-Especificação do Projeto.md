@@ -148,9 +148,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-015| O sistema deve possiblitar o usuário abrir os projetos e candidatar-se à vagas | ALTA |
 |RF-016| O sistema deve possibilitar que as ofertas de vagas fiquem disponíveis por um período de tempo padrão ou determinado pelos pesquisadores, e sejam automatiamente fechadas após esse período. | MÉDIA |
 |RF-017| O sistema deve possibilitar a reabertura de vagas fechadas pelos pesquisadores responsáveis. | MÉDIA |
-|RF-018|  | MÉDIA |
-|RF-019|  | MÉDIA |
-|RF-020|  | MÉDIA |
 
 # Requisitos não Funcionais
 
@@ -194,9 +191,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-016| O sistema não realizará análise automática de currículos ou perfis dos alunos  |
 |RST-017| O sistema não mediará interações entre os participantes fora do fórum, como mensagens privadas diretas |
 |RST-018| O sistema não fará validação automática da veracidade de projetos cadastrados  |
-|RST-019|   |
-|RST-020|   |
-|RST-021|   |
 
 # Alterações futuras
 
