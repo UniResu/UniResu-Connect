@@ -192,9 +192,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RST-017| O sistema não mediará interações entre os participantes fora do fórum, como mensagens privadas diretas |
 |RST-018| O sistema não fará validação automática da veracidade de projetos cadastrados  |
 
-# Alterações futuras
-
-Poderão ocorrer alterações futuras nas funcionalidades e restrições do projeto.
 
 # Diagrama de Casos de Uso
 
